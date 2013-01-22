@@ -9,3 +9,20 @@ _A multi-domain collaboration toolkit hides heterogeneity of user-interface tool
 Contents of the Repository
 -------------------------------
 This repository contains two projects, Virtual Toolkit and Translate.  Virtual Toolkit contains the source for the toolkit.  Translate contains a demo application translates three phrases from English to Mandarin - "hello", "spicy", and "not spicy".  This application can be run as distributed or non-distributed using the drivers in bus.driver package.  In the case of running the distributed case, you must run the AServerStarter or ASpecifiedServerStarter before running any of the Swing, SWT, or AWT versions.
+
+Required Libraries
+-------------------------------
+As of the time of writing, this project requires the following external libraries:
+<pre>
+	#GWT jars
+	gwt-dev.jar
+	gwt-servlet.jar
+	gwt-user.jar
+	
+	#SWT jars for your operating system (Windows, Mac, or Linux)
+	swt-debug.jar
+	swt.jar
+	
+	#Gluegen
+	gluegen-rt.jar
+</pre>
