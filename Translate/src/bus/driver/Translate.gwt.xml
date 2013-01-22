@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='translate'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User'/>
+
+  <!-- Inherit the default GWT style sheet.  You can change       -->
+  <!-- the theme of your GWT application by uncommenting          -->
+  <!-- any one of the following lines.                            -->
+  <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
+
+  <!-- Other module inherits                                      -->
+  <inherits name='bus.uigen.widgets.exceptions' />
+  <inherits name='bus.uigen.widgets' />
+  <inherits name='bus.uigen.widgets.events' />
+  <inherits name='bus.uigen.widgets.nondistributed' />
+  <inherits name='bus.uigen.widgets.gwt' />
+  <inherits name='bus.uigen.widgets.distributed' />
+  <inherits name='bus.uigen.widgets.distributed.gwt' />
+  <!--<inherits name='bus.uigen.widgets.distributed.client' />
+  <inherits name='bus.uigen.widgets.distributed.gwt' />-->
+  <inherits name='bus.ui' />
+  <inherits name='bus.listeners' />
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='bus.driver.client.Translate'/>
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='shared'/>
+
+</module>

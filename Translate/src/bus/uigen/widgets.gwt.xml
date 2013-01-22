@@ -1,0 +1,5 @@
+<module>
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name='bus.uigen.widgets.exceptions'/>
+  <source path="widgets" includes="*.java"></source>
+</module>

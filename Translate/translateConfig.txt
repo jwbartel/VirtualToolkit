@@ -1,0 +1,12 @@
+<application name="Translate">
+	
+	
+	<program name="large" />
+	
+	<program name="small">
+	</program>
+	
+	<widget name="from" />
+	<widget name="to"></widget>
+
+</application>
