@@ -14,7 +14,6 @@ import bus.uigen.widgets.MenuItemSelector;
 import bus.uigen.widgets.MenuSelector;
 import bus.uigen.widgets.NumberFormatSelector;
 import bus.uigen.widgets.PanelSelector;
-import bus.uigen.widgets.PasswordFieldSelector;
 import bus.uigen.widgets.TextFieldSelector;
 import bus.uigen.widgets.VirtualFrame;
 import bus.uigen.widgets.VirtualToolkit;
@@ -66,10 +65,10 @@ public class SWTToolkit extends VirtualToolkit {
 		PanelSelector.setPanelFactory(new SWTPanelFactory());
 		// ProxyGWTServerEndSelector.setProxyGWTServerEndFactory(new
 		// NonGWTProxyGWTServerEndFactory());
-		PasswordFieldSelector
-				.setPasswordFieldFactory(new SWTPasswordFieldFactory());
+		// PasswordFieldSelector.setPasswordFieldFactory(new
+		// SwingPasswordFieldFactory());
 		// RadioButtonSelector.setRadioButtonFactory(new
-		// SWTRadioButtonFactory());
+		// SwingRadioButtonFactory());
 		ScrollableTableSelector
 				.setScrollableTableFactory(new SWTScrollableTableFactory());
 		// ScrollPaneSelector.setScrollPaneFactory(new AWTScrollPaneFactory());

@@ -96,7 +96,8 @@ public class GWTTextField extends GWTComponent implements VirtualTextField {
 
 	@Override
 	public boolean isEditable() {
-		return !getTextBox().isReadOnly();
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override
@@ -107,7 +108,8 @@ public class GWTTextField extends GWTComponent implements VirtualTextField {
 
 	@Override
 	public void setEditable(boolean newVal) {
-		getTextBox().setReadOnly(!newVal);
+		// TODO Auto-generated method stub
+
 	}
 
 	public void setText(String theText) {
@@ -233,6 +235,12 @@ public class GWTTextField extends GWTComponent implements VirtualTextField {
 
 	public void execSetIsSynchronizedText(boolean isSynchronizedText) {
 		this.isSynchronizedText = isSynchronizedText;
+	}
+
+	@Override
+	public void setCaretPosition(int newVal) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

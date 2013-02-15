@@ -6,18 +6,6 @@ import javax.swing.JLabel;
 
 import bus.uigen.widgets.UniversalWidget;
 import bus.uigen.widgets.swing.SwingLabel;
-//import java.awt.Color;
-//import java.awt.Cursor;
-//import java.awt.Dimension;
-//import java.awt.Point;
-//import java.awt.event.FocusListener;
-//import java.awt.event.KeyListener;
-//import java.awt.event.MouseListener;
-//import java.lang.reflect.Method;
-//import javax.swing.JComponent;
-//import javax.swing.border.Border;
-//import bus.uigen.widgets.swt.SWTButton;
-//import bus.uigen.widgets.swt.SWTContainer;
 
 public class CentralUniversalWidget {
 	protected Object component;

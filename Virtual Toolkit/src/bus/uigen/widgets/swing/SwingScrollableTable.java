@@ -11,8 +11,6 @@ import bus.uigen.widgets.awt.AWTComponent;
 import bus.uigen.widgets.table.VirtualAbstractTableModel;
 import bus.uigen.widgets.table.VirtualScrollableTable;
 import bus.uigen.widgets.table.VirtualTableModel;
-//import javax.swing.ListSelectionModel;
-//import bus.uigen.widgets.table.ProxyAbstractTableModel;
 
 public class SwingScrollableTable extends SwingTable implements
 		VirtualScrollableTable {

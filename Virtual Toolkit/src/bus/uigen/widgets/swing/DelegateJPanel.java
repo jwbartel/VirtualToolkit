@@ -14,6 +14,7 @@ public class DelegateJPanel extends JPanel /* implements VirtualDelegatePanel */
 
 	public DelegateJPanel() {
 		super();
+		this.setName("Delegate J Component");
 
 	}
 

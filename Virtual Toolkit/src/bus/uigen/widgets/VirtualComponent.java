@@ -85,6 +85,12 @@ public interface VirtualComponent extends UniversalWidget {
 
 	public void setLocation(Object newVal);
 
+	public int getX();
+
+	public int getY();
+
+	public VirtualPoint getLocation();
+
 	public String getName();
 
 	public void setName(String newVal);

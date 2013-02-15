@@ -8,10 +8,6 @@ import javax.swing.event.ListSelectionListener;
 import bus.uigen.widgets.VirtualList;
 import bus.uigen.widgets.awt.AWTComponent;
 
-/*
- import javax.swing.event.ListExpansionListener;
- import javax.swing.event.ListSelectionListener;
- */
 //import javax.swing.table.ListPath;
 
 public class SwingList extends SwingComponent implements VirtualList {

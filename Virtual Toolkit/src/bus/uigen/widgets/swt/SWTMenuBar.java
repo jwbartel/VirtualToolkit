@@ -14,10 +14,6 @@ import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualMenu;
 import bus.uigen.widgets.VirtualMenuBar;
 import bus.uigen.widgets.universal.CentralUniversalWidget;
-//import java.awt.MenuBar;
-//import java.awt.event.ActionListener;
-//import bus.uigen.widgets.VirtualMenuItem;
-//import bus.uigen.widgets.swt.SWTMenu.MenuData;
 
 public class SWTMenuBar extends SWTMenuComponent implements VirtualMenuBar {
 	// Menu menu;

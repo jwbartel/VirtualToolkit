@@ -95,18 +95,6 @@ import bus.uigen.widgets.swing.SwingTree;
 import bus.uigen.widgets.swt.SWTButton;
 import bus.uigen.widgets.swt.SWTFrame;
 import bus.uigen.widgets.swt.SWTShell;
-//import java.awt.Color;
-//import java.awt.Cursor;
-//import java.awt.Dimension;
-//import java.awt.Point;
-//import java.awt.event.FocusListener;
-//import java.awt.event.KeyListener;
-//import java.awt.event.MouseListener;
-//import java.lang.reflect.Method;
-//import javax.swing.JComponent;
-//import javax.swing.border.Border;
-//import bus.uigen.widgets.swt.SWTButton;
-//import bus.uigen.widgets.swt.SWTContainer;
 
 public class AUniversalWidget {
 	protected Object component;

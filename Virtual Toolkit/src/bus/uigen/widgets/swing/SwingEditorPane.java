@@ -55,4 +55,10 @@ public class SwingEditorPane extends SwingTextComponent implements
 
 	}
 
+	@Override
+	public void setCaretPosition(int newVal) {
+		// TODO Auto-generated method stub
+
+	}
+
 }

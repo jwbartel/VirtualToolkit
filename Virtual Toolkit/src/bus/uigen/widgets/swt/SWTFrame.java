@@ -519,4 +519,16 @@ public class SWTFrame extends SWTContainer implements VirtualFrame,
 		super.execSetName(id);
 		contents.execSetName(id);
 	}
+
+	@Override
+	public void setGlassPane(VirtualComponent aGlassPane) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public VirtualComponent getGlassPane() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

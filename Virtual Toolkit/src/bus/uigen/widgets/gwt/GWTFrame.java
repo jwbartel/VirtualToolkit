@@ -223,4 +223,16 @@ public class GWTFrame extends GWTContainer implements VirtualFrame,
 		runnable.run();
 	}
 
+	@Override
+	public void setGlassPane(VirtualComponent aGlassPane) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public VirtualComponent getGlassPane() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

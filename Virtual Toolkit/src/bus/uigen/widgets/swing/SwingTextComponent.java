@@ -46,6 +46,11 @@ public abstract class SwingTextComponent extends AWTComponent {
 		}
 	}
 
+	public void setCaretPosition(int newVal) {
+		getTextComponent().setCaretPosition(newVal);
+
+	}
+
 	public void execSetText(String theText) {
 		Caret caret = getTextComponent().getCaret();
 		int caretPosition = caret.getMark();

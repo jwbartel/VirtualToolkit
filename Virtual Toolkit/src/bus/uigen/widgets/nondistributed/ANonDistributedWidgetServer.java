@@ -28,36 +28,6 @@ public class ANonDistributedWidgetServer implements WidgetServer {
 		proxy.join(programDescription, replicaID, false, false, false);
 	}
 
-	/*
-	 * public static String[] parseJoinDescription(String joinDescription) {
-	 * String[] retVal = new String[4];
-	 * 
-	 * int argPos = joinDescription.indexOf('?'); String serverAndApp =
-	 * joinDescription.substring(0, argPos); String sessionAndKind =
-	 * joinDescription.substring(argPos + 1);
-	 * 
-	 * while (serverAndApp.charAt(serverAndApp.length() - 1) == '/') {
-	 * serverAndApp = serverAndApp.substring(0, serverAndApp.length() - 1); }
-	 * 
-	 * int serverEnd = serverAndApp.lastIndexOf('/'); String server =
-	 * serverAndApp.substring(0, serverEnd); String app =
-	 * serverAndApp.substring(serverEnd + 1);
-	 * 
-	 * int sessionEnd = sessionAndKind.indexOf('&'); String session =
-	 * sessionAndKind.substring(0, sessionEnd); session =
-	 * session.substring("session=".length());
-	 * 
-	 * String kind = sessionAndKind.substring(sessionEnd + 1); kind =
-	 * kind.substring("kind=".length());
-	 * 
-	 * retVal[0] = server; retVal[1] = app; retVal[2] = session; retVal[3] =
-	 * kind; return retVal; }
-	 * 
-	 * public static String extractPort(String server) { int colonPos =
-	 * server.lastIndexOf(':'); if (colonPos >= 0) { return
-	 * server.substring(colonPos + 1); } else { return null; } }
-	 */
-
 	@Override
 	public String getServer() {
 		return programDescription.getServer();

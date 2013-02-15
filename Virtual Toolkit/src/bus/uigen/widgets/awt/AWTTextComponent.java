@@ -56,6 +56,11 @@ public abstract class AWTTextComponent extends AWTComponent {
 
 	}
 
+	public void setCaretPosition(int newVal) {
+		getTextComponent().setCaretPosition(newVal);
+
+	}
+
 	/*
 	 * public void addFocusListener(Object listener) {
 	 * getTextField().addFocusListener((FocusListener) listener);

@@ -15,12 +15,6 @@ import bus.uigen.widgets.table.VirtualAbstractTableModel;
 import bus.uigen.widgets.table.VirtualTable;
 import bus.uigen.widgets.table.VirtualTableModel;
 
-/*
- import javax.swing.event.TableExpansionListener;
- import javax.swing.event.TableSelectionListener;
- */
-//import javax.swing.table.TablePath;
-
 public class SwingTable extends AWTContainer implements VirtualTable {
 	// JTable getTable();
 	TableModel model;

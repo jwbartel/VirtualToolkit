@@ -1,10 +1,12 @@
 package bus.uigen.widgets.swing;
 
+import java.awt.Component;
 import java.awt.Container;
 
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 
+import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualFrame;
 import bus.uigen.widgets.VirtualMenuBar;
@@ -100,6 +102,17 @@ public class SwingFrame extends AWTFrame implements VirtualFrame {
 
 	public void setDefaultCloseOperation(int arg) {
 		getJFrame().setDefaultCloseOperation(arg);
+	}
+
+	@Override
+	public void setGlassPane(VirtualComponent aGlassPane) {
+		getJFrame().setGlassPane((Component) aGlassPane.getPhysicalComponent());
+
+	}
+
+	@Override
+	public VirtualComponent getGlassPane() {
+		return AWTComponent.virtualComponent(getJFrame().getGlassPane());
 	}
 
 }

@@ -20,6 +20,7 @@ import bus.uigen.widgets.PopupMenuSelector;
 import bus.uigen.widgets.RadioButtonSelector;
 import bus.uigen.widgets.ScrollPaneSelector;
 import bus.uigen.widgets.SliderSelector;
+import bus.uigen.widgets.SpinnerSelector;
 import bus.uigen.widgets.SplitPaneSelector;
 import bus.uigen.widgets.TextAreaSelector;
 import bus.uigen.widgets.TextFieldSelector;
@@ -108,6 +109,8 @@ public class SwingToolkit extends VirtualToolkit {
 		FlowLayoutSelector.setFlowLayoutFactory(new AWTFlowLayoutFactory());
 		NumberFormatSelector
 				.setNumberFormatFactory(new AWTNumberFormatFactory());
+		SpinnerSelector.setSpinnerFactory(new SwingSpinnerFactory());
+
 	}
 
 	public boolean maybeRegisterWidgets() {

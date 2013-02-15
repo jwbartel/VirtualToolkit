@@ -406,4 +406,20 @@ public class ADelegatingVirtualComponent implements VirtualComponent {
 
 	}
 
+	@Override
+	public int getX() {
+		// TODO Auto-generated method stub
+		return component.getX();
+	}
+
+	@Override
+	public int getY() {
+		return component.getY();
+	}
+
+	@Override
+	public VirtualPoint getLocation() {
+		return component.getLocation();
+	}
+
 }
