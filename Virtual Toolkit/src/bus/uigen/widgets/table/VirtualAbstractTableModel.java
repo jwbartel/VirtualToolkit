@@ -52,11 +52,13 @@ public abstract class VirtualAbstractTableModel extends DefaultTableModel
 		init();
 	}
 
+	@SuppressWarnings("rawtypes")
 	public VirtualAbstractTableModel(Vector columnNames, int rowCount) {
 		model = new DefaultTableModel(columnNames, rowCount);
 		init();
 	}
 
+	@SuppressWarnings("rawtypes")
 	public VirtualAbstractTableModel(Vector data, Vector columnNames) {
 		model = new DefaultTableModel(data, columnNames);
 		init();
@@ -168,7 +170,7 @@ public abstract class VirtualAbstractTableModel extends DefaultTableModel
 		}
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Class getColumnClass(int columnIndex) {
 		if (model != null) {
 			return model.getColumnClass(columnIndex);

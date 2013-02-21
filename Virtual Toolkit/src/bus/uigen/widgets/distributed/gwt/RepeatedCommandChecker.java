@@ -60,11 +60,9 @@ public class RepeatedCommandChecker extends Timer {
 
 	private static class ListenerCallBack implements
 			AsyncCallback<Map<String, VirtualListener>> {
-		String recipient;
 		GWTProxyGWTServerEnd proxy;
 
 		public ListenerCallBack(String recipient, GWTProxyGWTServerEnd proxy) {
-			this.recipient = recipient;
 			this.proxy = proxy;
 		}
 

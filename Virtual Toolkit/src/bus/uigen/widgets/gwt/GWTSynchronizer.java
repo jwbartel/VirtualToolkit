@@ -178,8 +178,6 @@ public class GWTSynchronizer implements Synchronizer {
 	public void synchronizeBuildCommands(String replicaID,
 			ProgramDescription programDescription) {
 		System.out.println("SYNCHRONIZE ATTEMPTED");
-		ArrayList<String> lbc = localBuildCommands;
-		ArrayList<Command> rbc = remoteBuildCommands;
 		if (localBuildCommands.size() != remoteBuildCommands.size()) {
 
 			if (localBuildCommands.size() == 2) {

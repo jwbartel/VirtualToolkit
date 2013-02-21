@@ -1,5 +1,6 @@
 package bus.uigen.widgets.forwarder;
 
+import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualFrame;
 import bus.uigen.widgets.VirtualMenuBar;
@@ -115,5 +116,17 @@ public class ForwarderFrame extends ForwarderContainer implements VirtualFrame {
 	public void open() {
 		// VirtualToolkit.sendCommandByDefault(VirtualFrame.COMMAND_LABEL +
 		// "open()");
+	}
+
+	@Override
+	public void setGlassPane(VirtualComponent aGlassPane) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public VirtualComponent getGlassPane() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

@@ -10,10 +10,6 @@ import javax.swing.JMenuItem;
 import bus.uigen.widgets.VirtualMenu;
 import bus.uigen.widgets.VirtualMenuItem;
 import bus.uigen.widgets.universal.CentralUniversalWidget;
-//import java.awt.Menu;
-//import java.awt.MenuItem;
-//import java.awt.event.ActionListener;
-//import bus.uigen.widgets.UniversalWidget;
 
 public class SwingMenu extends SwingMenuItem implements VirtualMenu {
 	JMenu menu;

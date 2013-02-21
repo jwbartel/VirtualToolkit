@@ -182,4 +182,10 @@ public class ForwarderTextField extends ForwarderTextComponent implements
 		}
 	}
 
+	@Override
+	public void setCaretPosition(int newVal) {
+		// TODO Auto-generated method stub
+
+	}
+
 }

@@ -1,11 +1,10 @@
 package bus.listeners;
 
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
 public class ATranslator  implements Translator {
-	static Map<String, String> map = new HashMap();
+	static Map<String, String> map = new HashMap<String,String>();
 	public String translate(String original) {
 		String retVal = map.get(original);
 		if(retVal != null) return retVal;

@@ -35,7 +35,7 @@ public abstract class AWTTextComponent extends AWTComponent {
 		execSetText(theText);
 		if (VirtualToolkit.isDistributedByDefault()) {
 			String widgetID = this.getName();
-			String uniqueID = VirtualToolkit.getUniqueIDByDefault();
+			VirtualToolkit.getUniqueIDByDefault();
 			VirtualToolkit
 					.sendCommandByDefault(VirtualTextComponent.COMMAND_LABEL
 							+ widgetID + VirtualTextComponent.SET_TEXT_COMMAND
@@ -53,6 +53,11 @@ public abstract class AWTTextComponent extends AWTComponent {
 	}
 
 	public void addTextListener(Object listener) {
+
+	}
+
+	public void setCaretPosition(int newVal) {
+		getTextComponent().setCaretPosition(newVal);
 
 	}
 

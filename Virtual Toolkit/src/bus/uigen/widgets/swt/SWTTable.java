@@ -336,11 +336,13 @@ public class SWTTable extends SWTContainer implements VirtualTable {
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	public void setDefaultEditor(Class objClass, TableCellEditor editor) {
 		// TODO Auto-generated method stub
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public void setDefaultEditor(Class objClass, Object editor) {
 		// TODO Auto-generated method stub

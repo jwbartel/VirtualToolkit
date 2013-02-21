@@ -6,18 +6,6 @@ import javax.swing.JLabel;
 
 import bus.uigen.widgets.UniversalWidget;
 import bus.uigen.widgets.swing.SwingLabel;
-//import java.awt.Color;
-//import java.awt.Cursor;
-//import java.awt.Dimension;
-//import java.awt.Point;
-//import java.awt.event.FocusListener;
-//import java.awt.event.KeyListener;
-//import java.awt.event.MouseListener;
-//import java.lang.reflect.Method;
-//import javax.swing.JComponent;
-//import javax.swing.border.Border;
-//import bus.uigen.widgets.swt.SWTButton;
-//import bus.uigen.widgets.swt.SWTContainer;
 
 public class CentralUniversalWidget {
 	protected Object component;
@@ -49,6 +37,7 @@ public class CentralUniversalWidget {
 	}
 
 	static transient Hashtable<Object, UniversalWidget> componentsToUniversalWidgets = new Hashtable<Object, UniversalWidget>();
+	@SuppressWarnings("rawtypes")
 	static transient Hashtable<Class, Class> componentClassToUniversalWidgetClass = new Hashtable<Class, Class>();
 
 	public static UniversalWidget existingUniversalWidget(Object c) {
@@ -60,6 +49,7 @@ public class CentralUniversalWidget {
 		componentsToUniversalWidgets.put(c, vc);
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static Class getVirtualClass(Class c) {
 		Class virtualClass = componentClassToUniversalWidgetClass.get(c);
 		Class superClass = c.getSuperclass();
@@ -71,6 +61,7 @@ public class CentralUniversalWidget {
 			return null;
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static UniversalWidget universalWidget(Object c) {
 		if (c == null)
 			return null;
@@ -115,6 +106,7 @@ public class CentralUniversalWidget {
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static void register(Class componentClass, Class virtualClass) {
 		componentClassToUniversalWidgetClass.put(componentClass, virtualClass);
 	}

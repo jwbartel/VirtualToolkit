@@ -6,8 +6,6 @@ import org.eclipse.swt.widgets.Table;
 
 import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.table.VirtualScrollableTable;
-//import bus.uigen.widgets.table.ProxyAbstractTableModel;
-//import bus.uigen.widgets.table.VirtualDefaultTableModel;
 
 public class SWTScrollableTable extends SWTTable implements
 		VirtualScrollableTable {

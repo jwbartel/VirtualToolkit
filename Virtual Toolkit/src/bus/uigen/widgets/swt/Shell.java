@@ -26,8 +26,7 @@ public class Shell extends Decorations {
 				.getParent().getPhysicalComponent())).setVisible(true);
 		// VirtualToolkit.start((VirtualFrame)
 		// AUniversalWidget.existingUniversalWidget(d.frame.getPhysicalComponent()));
-		VirtualToolkit toolkit = new SWTToolkit();
-		toolkit.start((VirtualFrame) CentralUniversalWidget
+		VirtualToolkit.start((VirtualFrame) CentralUniversalWidget
 				.existingUniversalWidget(shell.getParent()
 						.getPhysicalComponent()));
 	}

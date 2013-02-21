@@ -14,6 +14,7 @@ public class GWTTable extends GWTContainer implements VirtualTable {
 		// TODO Auto-generated constructor stub
 	}
 
+	@SuppressWarnings("rawtypes")
 	public CellTable getTable() {
 		return (CellTable) component;
 	}
@@ -30,6 +31,7 @@ public class GWTTable extends GWTContainer implements VirtualTable {
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public void setDefaultEditor(Class objClass, Object editor) {
 		// TODO Auto-generated method stub

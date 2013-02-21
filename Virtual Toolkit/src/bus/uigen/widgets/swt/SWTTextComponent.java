@@ -60,6 +60,11 @@ public abstract class SWTTextComponent extends SWTComponent {
 	 * }
 	 */
 
+	public void setCaretPosition(int newVal) {
+		getTextComponent().setCaretPosition(newVal);
+
+	}
+
 	public void setDocument(PlainDocument d) {
 		System.out.println("Set Document not defined for AWT Text Component");
 		// getTextComponent().setDocument(d);
@@ -69,6 +74,7 @@ public abstract class SWTTextComponent extends SWTComponent {
 		setDocument((PlainDocument) d);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void postEvent(Event event) {
 		getTextComponent().postEvent(event);
 	}

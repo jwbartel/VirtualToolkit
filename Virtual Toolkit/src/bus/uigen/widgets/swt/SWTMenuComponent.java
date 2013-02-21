@@ -35,6 +35,7 @@ public class SWTMenuComponent extends CentralUniversalWidget implements
 	/*
 	 * public Object getParent() { return menuComponent.getParent(); }
 	 */
+	@SuppressWarnings("deprecation")
 	public void postEvent(Event event) {
 		getMenuComponent().postEvent(event);
 	}

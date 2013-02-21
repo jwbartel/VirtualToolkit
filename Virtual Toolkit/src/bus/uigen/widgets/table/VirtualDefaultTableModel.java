@@ -33,11 +33,13 @@ public class VirtualDefaultTableModel extends VirtualAbstractTableModel
 		init();
 	}
 
+	@SuppressWarnings("rawtypes")
 	public VirtualDefaultTableModel(Vector columnNames, int rowCount) {
 		model = new DefaultTableModel(columnNames, rowCount);
 		init();
 	}
 
+	@SuppressWarnings("rawtypes")
 	public VirtualDefaultTableModel(Vector data, Vector columnNames) {
 		model = new DefaultTableModel(data, columnNames);
 		init();

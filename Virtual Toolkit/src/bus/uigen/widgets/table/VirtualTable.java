@@ -36,6 +36,7 @@ public interface VirtualTable extends VirtualContainer {
 	// public Object getSelectionPath();
 	// public Object[] getSelectionPaths();
 	// public void setDefaultEditor (Class objClass, TableCellEditor editor) ;
+	@SuppressWarnings("rawtypes")
 	public void setDefaultEditor(Class objClass, Object editor);
 
 	public VirtualComponent getTableHeader();

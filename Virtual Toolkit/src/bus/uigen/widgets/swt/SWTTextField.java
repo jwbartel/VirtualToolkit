@@ -8,8 +8,8 @@ import java.util.Set;
 import javax.swing.text.PlainDocument;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Text;
 
 import bus.uigen.widgets.ActionEventForwarder;
 import bus.uigen.widgets.VirtualContainer;
@@ -48,6 +48,11 @@ public class SWTTextField extends SWTComponent implements VirtualTextField {
 
 	}
 
+	public void setCaretPosition(int newVal) {
+		// getTextField().setCaretPosition(newVal);
+
+	}
+
 	public void init() {
 		super.init();
 		getTextField().addKeyListener(forwarder);
@@ -58,8 +63,8 @@ public class SWTTextField extends SWTComponent implements VirtualTextField {
 		return vActionListeners;
 	}
 
-	public Text getTextField() {
-		return (Text) component;
+	public StyledText getTextField() {
+		return (StyledText) component;
 	}
 
 	public int getColumns() {
@@ -92,8 +97,9 @@ public class SWTTextField extends SWTComponent implements VirtualTextField {
 			}
 		}
 
-		component = new Text((Composite) theParent.getPhysicalComponent(),
-				SWT.BORDER);
+		component = new StyledText(
+				(Composite) theParent.getPhysicalComponent(), SWT.SINGLE
+						| SWT.BORDER);
 
 		init();
 		addAllListeners();
@@ -119,14 +125,14 @@ public class SWTTextField extends SWTComponent implements VirtualTextField {
 	public String getText() {
 		if (component == null)
 			return text;
-		return ((Text) component).getText();
+		return ((StyledText) component).getText();
 	}
 
 	public void setText(String theText) {
 		execSetText(theText);
 		if (VirtualToolkit.isDistributedByDefault()) {
 			String widgetID = this.getName();
-			String uniqueID = VirtualToolkit.getUniqueIDByDefault();
+			VirtualToolkit.getUniqueIDByDefault();
 			VirtualToolkit
 					.sendCommandByDefault(VirtualTextComponent.COMMAND_LABEL
 							+ widgetID + VirtualTextComponent.SET_TEXT_COMMAND
@@ -139,6 +145,8 @@ public class SWTTextField extends SWTComponent implements VirtualTextField {
 		// text = new Text((Composite) getParent(),SWT.BORDER);
 		text = theText;
 		if (getTextField() != null) {
+			if (getTextField().equals(theText))
+				return;
 			getTextField().getDisplay().asyncExec(new TextSetter(theText));
 		}
 		// getTextField().setText(theText);
@@ -153,7 +161,16 @@ public class SWTTextField extends SWTComponent implements VirtualTextField {
 		}
 
 		public void run() {
+			String oldText = getTextField().getText();
+			int caratPosition = getTextField().getCaretOffset();
+			if (caratPosition == oldText.length()) {
+				caratPosition = text.length();
+			} else if (caratPosition > oldText.length()) {
+				caratPosition = oldText.length();
+			}
+
 			getTextField().setText(text);
+			getTextField().setCaretOffset(caratPosition);
 		}
 
 	}
@@ -201,7 +218,7 @@ public class SWTTextField extends SWTComponent implements VirtualTextField {
 		// getTextComponent().setEditable(newVal);
 	}
 
-	public static SWTTextField virtualTextField(Text theTextField) {
+	public static SWTTextField virtualTextField(StyledText theTextField) {
 		return (SWTTextField) SWTComponent.virtualComponent(theTextField);
 
 	}

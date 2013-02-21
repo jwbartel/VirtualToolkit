@@ -185,7 +185,7 @@ public class ADelegatingVirtualComponent implements VirtualComponent {
 		execSetSize(width, height);
 		if (VirtualToolkit.isDistributedByDefault()) {
 			String widgetID = this.getName();
-			String uniqueID = VirtualToolkit.getUniqueIDByDefault();
+			VirtualToolkit.getUniqueIDByDefault();
 			VirtualToolkit.sendCommandByDefault(COMMAND_LABEL + widgetID
 					+ SET_SIZE_COMMAND + width + "," + height + ")");
 		}
@@ -404,6 +404,22 @@ public class ADelegatingVirtualComponent implements VirtualComponent {
 	public VirtualDimension getMaximumSize() {
 		return component.getMaximumSize();
 
+	}
+
+	@Override
+	public int getX() {
+		// TODO Auto-generated method stub
+		return component.getX();
+	}
+
+	@Override
+	public int getY() {
+		return component.getY();
+	}
+
+	@Override
+	public VirtualPoint getLocation() {
+		return component.getLocation();
 	}
 
 }

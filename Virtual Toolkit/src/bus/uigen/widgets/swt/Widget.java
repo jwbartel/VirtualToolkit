@@ -24,6 +24,7 @@ import javax.swing.border.Border;
 import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualDimension;
+import bus.uigen.widgets.VirtualPoint;
 import bus.uigen.widgets.VirtualToolkit;
 import bus.uigen.widgets.events.VirtualFocusListener;
 import bus.uigen.widgets.events.VirtualMouseListener;
@@ -178,7 +179,7 @@ public class Widget implements VirtualComponent {
 		execSetSize(width, height);
 		if (VirtualToolkit.isDistributedByDefault()) {
 			String widgetID = this.getName();
-			String uniqueID = VirtualToolkit.getUniqueIDByDefault();
+			VirtualToolkit.getUniqueIDByDefault();
 			VirtualToolkit.sendCommandByDefault(COMMAND_LABEL + widgetID
 					+ SET_SIZE_COMMAND + width + "," + height + ")");
 		}
@@ -497,6 +498,24 @@ public class Widget implements VirtualComponent {
 
 	public boolean isDisposed() {
 		return true;
+	}
+
+	@Override
+	public int getX() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getY() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public VirtualPoint getLocation() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

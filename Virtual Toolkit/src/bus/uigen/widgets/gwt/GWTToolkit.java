@@ -1,15 +1,11 @@
 package bus.uigen.widgets.gwt;
 
-import bus.uigen.widgets.ButtonGroupSelector;
 import bus.uigen.widgets.ButtonSelector;
-import bus.uigen.widgets.CheckBoxSelector;
-import bus.uigen.widgets.FlowLayoutSelector;
 import bus.uigen.widgets.FrameSelector;
 import bus.uigen.widgets.GridLayoutSelector;
 import bus.uigen.widgets.LabelSelector;
 import bus.uigen.widgets.NumberFormatSelector;
 import bus.uigen.widgets.PanelSelector;
-import bus.uigen.widgets.PasswordFieldSelector;
 import bus.uigen.widgets.TextFieldSelector;
 import bus.uigen.widgets.VirtualFrame;
 import bus.uigen.widgets.VirtualToolkit;
@@ -40,18 +36,10 @@ public class GWTToolkit extends VirtualToolkit {
 		registerer.registerUniversalWidgetClasses();
 
 		ButtonSelector.setButtonFactory(new GWTButtonFactory());
-		ButtonGroupSelector.setButtonGroupFactory(new GWTButtonGroupFactory());
-		CheckBoxSelector.setCheckBoxFactory(new GWTCheckBoxFactory());
-		FlowLayoutSelector.setFlowLayoutFactory(new GWTFlowLayoutFactory());
 		FrameSelector.setFrameFactory(new GWTFrameFactory());
 		GridLayoutSelector.setGridLayoutFactory(new GWTGridLayoutFactory());
 		LabelSelector.setLabelFactory(new GWTLabelFactory());
-		// ListSelector.setListFactory(new GWTListFactory());
-		// MenuBarSelector.setMenuBarFactory(new GWTMenuBarFactory());
-		// MenuItemSelector.setMenuItemFactory(new GWTMenuItemFactory());
 		PanelSelector.setPanelFactory(new GWTPanelFactory());
-		PasswordFieldSelector
-				.setPasswordFieldFactory(new GWTPasswordFieldFactory());
 		// ProxyGWTServerEndSelector.setProxyGWTServerEndFactory(new
 		// GWTProxyGWTServerEndFactory());
 		TextFieldSelector.setTextFieldFactory(new GWTTextFieldFactory());

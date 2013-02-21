@@ -8,14 +8,11 @@ import javax.swing.event.ListSelectionListener;
 import bus.uigen.widgets.VirtualList;
 import bus.uigen.widgets.awt.AWTComponent;
 
-/*
- import javax.swing.event.ListExpansionListener;
- import javax.swing.event.ListSelectionListener;
- */
 //import javax.swing.table.ListPath;
 
 public class SwingList extends SwingComponent implements VirtualList {
 	// JList getList();
+	@SuppressWarnings("rawtypes")
 	public SwingList(JList theList) {
 		super(theList);
 		// getList() = theList;
@@ -26,6 +23,7 @@ public class SwingList extends SwingComponent implements VirtualList {
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	public JList getList() {
 		return (JList) component;
 	}
@@ -51,10 +49,12 @@ public class SwingList extends SwingComponent implements VirtualList {
 	 * public void setEditable(boolean newVal) { getList().setEditable(newVal);
 	 * }
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void setModel(ListModel model) {
 		getList().setModel(model);
 	}
 
+	@SuppressWarnings("rawtypes")
 	public void setModel(Object model) {
 		setModel((ListModel) model);
 	}
@@ -107,6 +107,7 @@ public class SwingList extends SwingComponent implements VirtualList {
 		getList().setSelectionInterval(anchor, lead);
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static SwingList virtualList(JList theList) {
 		return (SwingList) AWTComponent.virtualComponent(theList);
 

@@ -6,6 +6,7 @@ import java.awt.PopupMenu;
 import java.awt.event.ComponentListener;
 import java.awt.event.WindowListener;
 
+import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualFrame;
 import bus.uigen.widgets.VirtualMenuBar;
@@ -79,6 +80,7 @@ public class AWTFrame extends AWTContainer implements VirtualFrame {
 		return getFrame().getTitle();
 	}
 
+	@SuppressWarnings("deprecation")
 	public void setCursor(int newVal) {
 		getFrame().setCursor(newVal);
 	}
@@ -178,6 +180,18 @@ public class AWTFrame extends AWTContainer implements VirtualFrame {
 
 	public void syncExec(Runnable runnable) {
 		runnable.run();
+	}
+
+	@Override
+	public void setGlassPane(VirtualComponent aGlassPane) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public VirtualComponent getGlassPane() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

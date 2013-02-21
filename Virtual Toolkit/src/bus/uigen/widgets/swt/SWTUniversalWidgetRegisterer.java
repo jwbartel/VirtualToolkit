@@ -4,12 +4,12 @@ import java.awt.MenuBar;
 import java.awt.MenuComponent;
 import java.awt.MenuContainer;
 
+import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 
 import bus.uigen.widgets.UniversalWidgetRegisterer;
@@ -29,7 +29,7 @@ public class SWTUniversalWidgetRegisterer implements UniversalWidgetRegisterer {
 		CentralUniversalWidget.register(org.eclipse.swt.widgets.Display.class,
 				SWTFrame.class);
 		CentralUniversalWidget.register(Label.class, SWTLabel.class);
-		CentralUniversalWidget.register(Text.class, SWTTextField.class);
+		CentralUniversalWidget.register(StyledText.class, SWTTextField.class);
 		CentralUniversalWidget.register(Combo.class, SWTComboBox.class);
 		CentralUniversalWidget.register(Tree.class, SWTTree.class);
 		CentralUniversalWidget.register(MenuComponent.class,
