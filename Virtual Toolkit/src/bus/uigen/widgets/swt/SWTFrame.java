@@ -446,18 +446,6 @@ public class SWTFrame extends SWTContainer implements VirtualFrame,
 		 */
 	}
 
-	private class SetVisibleThread extends Thread {
-		boolean val;
-
-		public SetVisibleThread(boolean val) {
-			this.val = val;
-		}
-
-		public void run() {
-			getShell().setVisible(val);
-		}
-	}
-
 	public void setVisible(boolean newVal) {
 		// getDisplay().syncExec(new SetVisibleThread(newVal));
 		getShell().setVisible(newVal);

@@ -80,6 +80,7 @@ public class AWTFrame extends AWTContainer implements VirtualFrame {
 		return getFrame().getTitle();
 	}
 
+	@SuppressWarnings("deprecation")
 	public void setCursor(int newVal) {
 		getFrame().setCursor(newVal);
 	}

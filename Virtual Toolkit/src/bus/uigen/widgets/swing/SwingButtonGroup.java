@@ -34,7 +34,7 @@ public class SwingButtonGroup implements VirtualButtonGroup {
 		return buttonGroup.getSelection().getActionCommand();
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Enumeration getElements() {
 		return buttonGroup.getElements();
 	}

@@ -37,6 +37,7 @@ public class CentralUniversalWidget {
 	}
 
 	static transient Hashtable<Object, UniversalWidget> componentsToUniversalWidgets = new Hashtable<Object, UniversalWidget>();
+	@SuppressWarnings("rawtypes")
 	static transient Hashtable<Class, Class> componentClassToUniversalWidgetClass = new Hashtable<Class, Class>();
 
 	public static UniversalWidget existingUniversalWidget(Object c) {
@@ -48,6 +49,7 @@ public class CentralUniversalWidget {
 		componentsToUniversalWidgets.put(c, vc);
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static Class getVirtualClass(Class c) {
 		Class virtualClass = componentClassToUniversalWidgetClass.get(c);
 		Class superClass = c.getSuperclass();
@@ -59,6 +61,7 @@ public class CentralUniversalWidget {
 			return null;
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static UniversalWidget universalWidget(Object c) {
 		if (c == null)
 			return null;
@@ -103,6 +106,7 @@ public class CentralUniversalWidget {
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static void register(Class componentClass, Class virtualClass) {
 		componentClassToUniversalWidgetClass.put(componentClass, virtualClass);
 	}

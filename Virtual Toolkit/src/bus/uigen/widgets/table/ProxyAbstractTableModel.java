@@ -114,7 +114,7 @@ public class ProxyAbstractTableModel extends VirtualAbstractTableModel {
 			absModel.fireTableStructureChanged();
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Class getColumnClass(int columnIndex) {
 		if (absModel != null)
 			return absModel.getColumnClass(columnIndex);

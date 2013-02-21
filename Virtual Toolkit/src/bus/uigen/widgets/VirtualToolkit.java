@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+import bus.uigen.widgets.distributed.Command;
 import bus.uigen.widgets.distributed.ProgramDescription;
 import bus.uigen.widgets.events.VirtualListener;
 import bus.uigen.widgets.exceptions.SynchronizationException;
@@ -74,7 +75,7 @@ public abstract class VirtualToolkit {
 
 			// Parse the elements of the url
 			programDescription = new ProgramDescription(joinDescription);
-			replicaID = replicaID;
+			this.replicaID = replicaID;
 
 			// Create and connect the widget server
 			widgetServer = WidgetServerSelector.createWidgetServer(
@@ -289,8 +290,6 @@ public abstract class VirtualToolkit {
 	}
 
 	public String getNameOnServer() {
-		String port = programDescription.getPort();
-
 		String retVal = "//" + programDescription.getServer();
 		if (programDescription.getPort() == null)
 			retVal += ":" + VirtualToolkit.PORT;
@@ -320,12 +319,12 @@ public abstract class VirtualToolkit {
 		receivedCommands.addAll(commands);
 	}
 
-	public static void setDefaultRemoteBuildCommands(ArrayList buildCommands)
+	public static void setDefaultRemoteBuildCommands(ArrayList<Command> buildCommands)
 			throws SynchronizationException {
 		defaultToolkit.setRemoteBuildCommands(buildCommands);
 	}
 
-	public void setRemoteBuildCommands(ArrayList buildCommands)
+	public void setRemoteBuildCommands(ArrayList<Command> buildCommands)
 			throws SynchronizationException {
 		synchronizer.setRemoteBuildCommands(buildCommands);
 		/*
@@ -484,7 +483,7 @@ public abstract class VirtualToolkit {
 	}
 
 	public static Map<VirtualListener, String> getlistenerCreators() {
-		return defaultToolkit.listenerCreators;
+		return VirtualToolkit.listenerCreators;
 	}
 
 	public static WidgetServer getWidgetServer() {

@@ -206,7 +206,7 @@ public abstract class SWTComponent extends CentralUniversalWidget implements
 		execSetSize(newWidth, newHeight);
 		if (VirtualToolkit.isDistributedByDefault()) {
 			String widgetID = this.getName();
-			String uniqueID = VirtualToolkit.getUniqueIDByDefault();
+			VirtualToolkit.getUniqueIDByDefault();
 			VirtualToolkit.sendCommandByDefault(COMMAND_LABEL + widgetID
 					+ SET_SIZE_COMMAND + newWidth + "," + newHeight + ")");
 		}

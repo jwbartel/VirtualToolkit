@@ -86,6 +86,7 @@ public abstract class SwingTextComponent extends AWTComponent {
 		setDocument((PlainDocument) d);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void postEvent(Event event) {
 		getTextComponent().postEvent(event);
 	}

@@ -2,6 +2,7 @@ package bus.uigen.widgets;
 
 import java.util.ArrayList;
 
+import bus.uigen.widgets.distributed.Command;
 import bus.uigen.widgets.distributed.ProgramDescription;
 
 public class DefaultSynchronizer implements Synchronizer {
@@ -25,7 +26,7 @@ public class DefaultSynchronizer implements Synchronizer {
 	}
 
 	@Override
-	public void setRemoteBuildCommands(ArrayList buildCommands) {
+	public void setRemoteBuildCommands(ArrayList<Command> buildCommands) {
 		// TODO Auto-generated method stub
 
 	}

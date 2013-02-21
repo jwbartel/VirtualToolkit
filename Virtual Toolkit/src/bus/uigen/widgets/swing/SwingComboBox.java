@@ -12,6 +12,7 @@ import bus.uigen.widgets.awt.AWTComponent;
 
 public class SwingComboBox extends SwingComponent implements VirtualComboBox {
 	// JComboBox getComboBox();
+	@SuppressWarnings("rawtypes")
 	public SwingComboBox(JComboBox theComboBox) {
 		super(theComboBox);
 		// getComboBox() = theComboBox;
@@ -22,10 +23,12 @@ public class SwingComboBox extends SwingComponent implements VirtualComboBox {
 
 	}
 
-	public JComboBox getComboBox() {
-		return (JComboBox) component;
+	@SuppressWarnings("unchecked")
+	public JComboBox<Object> getComboBox() {
+		return (JComboBox<Object>) component;
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void init(Object[] choices) {
 		Component c = new JComboBox(choices);
 		super.init(c);
@@ -47,12 +50,13 @@ public class SwingComboBox extends SwingComponent implements VirtualComboBox {
 		getComboBox().setLightWeightPopupEnabled(newVal);
 	}
 
-	public void setModel(ComboBoxModel newVal) {
+	public void setModel(ComboBoxModel<Object> newVal) {
 		getComboBox().setModel(newVal);
 	}
 
+	@SuppressWarnings("unchecked")
 	public void setModel(Object newVal) {
-		setModel((ComboBoxModel) newVal);
+		setModel((ComboBoxModel<Object>) newVal);
 	}
 
 	public void updateUI() {
@@ -75,6 +79,7 @@ public class SwingComboBox extends SwingComponent implements VirtualComboBox {
 		getComboBox().setMaximumRowCount(num);
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static VirtualComboBox virtualComboBox(JComboBox theComboBox) {
 		return (VirtualComboBox) AWTComponent.virtualComponent(theComboBox);
 
@@ -92,6 +97,7 @@ public class SwingComboBox extends SwingComponent implements VirtualComboBox {
 		getComboBox().addItem(choice);
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void setRenderer(Object newVal) {
 		getComboBox().setRenderer((ListCellRenderer) newVal);

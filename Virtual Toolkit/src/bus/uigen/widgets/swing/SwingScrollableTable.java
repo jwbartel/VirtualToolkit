@@ -88,10 +88,12 @@ public class SwingScrollableTable extends SwingTable implements
 		table.updateUI();
 	}
 
+	@SuppressWarnings("rawtypes")
 	public void setDefaultEditor(Class objClass, TableCellEditor editor) {
 		table.setDefaultEditor(objClass, editor);
 	}
 
+	@SuppressWarnings("rawtypes")
 	public void setDefaultEditor(Class objClass, Object editor) {
 		table.setDefaultEditor(objClass, editor);
 	}

@@ -53,6 +53,7 @@ public class SwingCheckBox extends SwingComponent implements VirtualCheckBox {
 		// getJCheckBox().addChangeListener(l);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void postEvent(Event event) {
 		getJCheckBox().postEvent(event);
 	}

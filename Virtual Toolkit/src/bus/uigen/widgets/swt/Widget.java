@@ -179,7 +179,7 @@ public class Widget implements VirtualComponent {
 		execSetSize(width, height);
 		if (VirtualToolkit.isDistributedByDefault()) {
 			String widgetID = this.getName();
-			String uniqueID = VirtualToolkit.getUniqueIDByDefault();
+			VirtualToolkit.getUniqueIDByDefault();
 			VirtualToolkit.sendCommandByDefault(COMMAND_LABEL + widgetID
 					+ SET_SIZE_COMMAND + width + "," + height + ")");
 		}
