@@ -49,6 +49,7 @@ public class SWTTree extends SWTComponent implements VirtualTree {
 		super.init();
 	}
 
+	@SuppressWarnings("rawtypes")
 	protected VirtualTreeNode getNodes(Object value) {
 		VirtualMutableTreeNode node = new VirtualMutableTreeNode(value);
 		if (node != null) {
@@ -106,7 +107,6 @@ public class SWTTree extends SWTComponent implements VirtualTree {
 
 	protected void generateFromModel(Object currentNode, Tree parent) {
 		TreeItem currItem = new TreeItem(parent, SWT.None);
-		String text = currentNode.toString();
 		currItem.setText(currentNode.toString());
 		recurseModel(currentNode, currItem);
 	}

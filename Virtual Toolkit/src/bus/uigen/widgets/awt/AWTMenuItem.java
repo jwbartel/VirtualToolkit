@@ -50,6 +50,7 @@ public class AWTMenuItem extends AWTMenuComponent implements VirtualMenuItem {
 		setEnabled(true);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void postEvent(Event event) {
 		getMenuItem().postEvent(event);
 	}

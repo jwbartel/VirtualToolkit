@@ -61,6 +61,7 @@ public class SwingProgressBar extends AWTComponent implements
 		// getProgressBar().addChangeListener(l);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void postEvent(Event event) {
 		getProgressBar().postEvent(event);
 	}

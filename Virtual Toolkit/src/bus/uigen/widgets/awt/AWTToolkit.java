@@ -20,6 +20,7 @@ import bus.uigen.widgets.PopupMenuSelector;
 import bus.uigen.widgets.RadioButtonSelector;
 import bus.uigen.widgets.ScrollPaneSelector;
 import bus.uigen.widgets.SliderSelector;
+import bus.uigen.widgets.SpinnerSelector;
 import bus.uigen.widgets.SplitPaneSelector;
 import bus.uigen.widgets.TextAreaSelector;
 import bus.uigen.widgets.TextFieldSelector;
@@ -35,6 +36,7 @@ import bus.uigen.widgets.swing.SwingPasswordFieldFactory;
 import bus.uigen.widgets.swing.SwingRadioButtonFactory;
 import bus.uigen.widgets.swing.SwingScrollableTableFactory;
 import bus.uigen.widgets.swing.SwingSliderFactory;
+import bus.uigen.widgets.swing.SwingSpinnerFactory;
 import bus.uigen.widgets.swing.SwingSplitPaneFactory;
 import bus.uigen.widgets.swing.SwingTableFactory;
 import bus.uigen.widgets.swing.SwingToolBarFactory;
@@ -104,6 +106,7 @@ public class AWTToolkit extends VirtualToolkit {
 		ToolBarSelector.setToolBarFactory(new SwingToolBarFactory());
 		TreeSelector.setTreeFactory(new SwingTreeFactory());
 		TableSelector.setTableFactory(new SwingTableFactory());
+		SpinnerSelector.setSpinnerFactory(new SwingSpinnerFactory());
 	}
 
 	public boolean maybeRegisterWidgets() {

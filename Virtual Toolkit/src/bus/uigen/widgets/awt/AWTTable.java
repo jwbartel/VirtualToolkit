@@ -52,10 +52,12 @@ public class AWTTable extends SwingTable implements VirtualTable {
 		getTable().updateUI();
 	}
 
+	@SuppressWarnings("rawtypes")
 	public void setDefaultEditor(Class objClass, TableCellEditor editor) {
 		getTable().setDefaultEditor(objClass, editor);
 	}
 
+	@SuppressWarnings("rawtypes")
 	public void setDefaultEditor(Class objClass, Object editor) {
 		setDefaultEditor(objClass, (TableCellEditor) editor);
 	}

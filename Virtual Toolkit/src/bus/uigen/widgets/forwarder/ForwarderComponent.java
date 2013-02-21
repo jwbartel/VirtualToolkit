@@ -3,6 +3,7 @@ package bus.uigen.widgets.forwarder;
 import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualDimension;
+import bus.uigen.widgets.VirtualPoint;
 import bus.uigen.widgets.VirtualToolkit;
 import bus.uigen.widgets.events.VirtualFocusListener;
 import bus.uigen.widgets.events.VirtualMouseListener;
@@ -346,6 +347,24 @@ public abstract class ForwarderComponent extends CentralUniversalWidget
 
 	public void addMouseListener(Object listener) {
 
+	}
+
+	@Override
+	public int getX() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getY() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public VirtualPoint getLocation() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

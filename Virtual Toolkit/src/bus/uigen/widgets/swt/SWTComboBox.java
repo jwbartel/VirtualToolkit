@@ -29,6 +29,7 @@ public class SWTComboBox extends SWTComponent implements VirtualComboBox {
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	public SWTComboBox(Vector choices) {
 
 	}
@@ -70,6 +71,7 @@ public class SWTComboBox extends SWTComponent implements VirtualComboBox {
 		// getComboBox().setLightWeightPopupEnabled(newVal);
 	}
 
+	@SuppressWarnings("rawtypes")
 	public void setModel(ComboBoxModel newVal) {
 		// getComboBox().setModel(newVal);
 	}

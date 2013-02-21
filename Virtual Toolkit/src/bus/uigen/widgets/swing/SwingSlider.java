@@ -66,6 +66,7 @@ public class SwingSlider extends AWTComponent implements VirtualSlider {
 		// getSlider().addChangeListener(l);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void postEvent(Event event) {
 		getSlider().postEvent(event);
 	}

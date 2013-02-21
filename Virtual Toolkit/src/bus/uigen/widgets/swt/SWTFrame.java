@@ -446,18 +446,6 @@ public class SWTFrame extends SWTContainer implements VirtualFrame,
 		 */
 	}
 
-	private class SetVisibleThread extends Thread {
-		boolean val;
-
-		public SetVisibleThread(boolean val) {
-			this.val = val;
-		}
-
-		public void run() {
-			getShell().setVisible(val);
-		}
-	}
-
 	public void setVisible(boolean newVal) {
 		// getDisplay().syncExec(new SetVisibleThread(newVal));
 		getShell().setVisible(newVal);
@@ -518,5 +506,17 @@ public class SWTFrame extends SWTContainer implements VirtualFrame,
 	public void execSetName(String id) {
 		super.execSetName(id);
 		contents.execSetName(id);
+	}
+
+	@Override
+	public void setGlassPane(VirtualComponent aGlassPane) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public VirtualComponent getGlassPane() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

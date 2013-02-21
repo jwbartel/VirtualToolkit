@@ -17,7 +17,7 @@ public class ADisplayedContainer extends ADisplayedComponent implements
 	String toString = "";
 	int numComponents;
 	// int width;
-	List<DisplayedComponent> children = new ArrayList();
+	List<DisplayedComponent> children = new ArrayList<DisplayedComponent>();
 
 	// public String getName() {
 	// return name;

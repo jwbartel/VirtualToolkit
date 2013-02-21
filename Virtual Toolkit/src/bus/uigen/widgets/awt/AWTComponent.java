@@ -16,6 +16,7 @@ import javax.swing.border.Border;
 import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualDimension;
+import bus.uigen.widgets.VirtualPoint;
 import bus.uigen.widgets.VirtualToolkit;
 import bus.uigen.widgets.events.VirtualFocusListener;
 import bus.uigen.widgets.events.VirtualMouseListener;
@@ -140,6 +141,19 @@ public abstract class AWTComponent extends CentralUniversalWidget implements
 		getComponent().setLocation(newVal);
 	}
 
+	public int getX() {
+		return getComponent().getX();
+	}
+
+	public int getY() {
+		return getComponent().getY();
+	}
+
+	public VirtualPoint getLocation() {
+		Point p = getComponent().getLocation();
+		return new VirtualPoint(p.x, p.y);
+	}
+
 	public void repaint() {
 		getComponent().repaint();
 	}
@@ -196,7 +210,7 @@ public abstract class AWTComponent extends CentralUniversalWidget implements
 		execSetSize(width, height);
 		if (VirtualToolkit.isDistributedByDefault()) {
 			String widgetID = this.getName();
-			String uniqueID = VirtualToolkit.getUniqueIDByDefault();
+			VirtualToolkit.getUniqueIDByDefault();
 			VirtualToolkit.sendCommandByDefault(COMMAND_LABEL + widgetID
 					+ SET_SIZE_COMMAND + width + "," + height + ")");
 		}

@@ -17,10 +17,6 @@ import bus.uigen.widgets.VirtualMenuItem;
 import bus.uigen.widgets.VirtualPopupMenu;
 import bus.uigen.widgets.events.VirtualActionListener;
 import bus.uigen.widgets.universal.CentralUniversalWidget;
-//import java.awt.PopupMenu;
-//import javax.swing.JButton;
-//import bus.uigen.widgets.VirtualMenuComponent;
-//import bus.uigen.widgets.awt.AWTComponent;
 
 public class SwingPopupMenu extends CentralUniversalWidget implements
 		VirtualPopupMenu {

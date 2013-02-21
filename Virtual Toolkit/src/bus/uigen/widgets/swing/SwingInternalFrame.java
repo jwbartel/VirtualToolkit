@@ -164,4 +164,16 @@ public class SwingInternalFrame extends SwingComponent implements
 		runnable.run();
 	}
 
+	@Override
+	public void setGlassPane(VirtualComponent aGlassPane) {
+		getJInternalFrame().setGlassPane(
+				(Component) aGlassPane.getPhysicalComponent());
+	}
+
+	@Override
+	public VirtualComponent getGlassPane() {
+		return AWTContainer
+				.virtualComponent(getJInternalFrame().getGlassPane());
+	}
+
 }

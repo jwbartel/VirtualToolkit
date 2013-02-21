@@ -83,10 +83,12 @@ public class SwingMenuItem extends CentralUniversalWidget implements
 		setEnabled(true);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void postEvent(Event event) {
 		getMenuItem().postEvent(event);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void setLabel(String newVal) {
 		getMenuItem().setLabel(newVal);
 	}

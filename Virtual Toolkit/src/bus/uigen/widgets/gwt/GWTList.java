@@ -45,6 +45,7 @@ public class GWTList extends GWTContainer implements VirtualList {
 
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void setSelectionMode(int mode) {
 		if (mode == 0)

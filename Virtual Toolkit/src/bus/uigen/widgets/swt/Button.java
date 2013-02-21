@@ -5,12 +5,6 @@ import bus.uigen.widgets.ButtonSelector;
 import bus.uigen.widgets.VirtualButton;
 import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.universal.CentralUniversalWidget;
-//import bus.uigen.widgets.swt.Shell;
-//import bus.uigen.widgets.FrameSelector;
-//import bus.uigen.widgets.PanelSelector;
-//import bus.uigen.widgets.ButtonFactory;
-//import bus.uigen.widgets.VirtualFrame;
-//import org.eclipse.swt.widgets.Button;
 
 public class Button extends Control {
 	VirtualButton button;
