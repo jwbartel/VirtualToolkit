@@ -16,6 +16,7 @@ import bus.uigen.widgets.ActionEventForwarder;
 import bus.uigen.widgets.VirtualButton;
 import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualToolkit;
+import bus.uigen.widgets.awt.AWTButtonEventForwarder;
 import bus.uigen.widgets.events.VirtualActionEvent;
 import bus.uigen.widgets.events.VirtualActionListener;
 import bus.uigen.widgets.events.VirtualActionListenerFactory;
@@ -33,6 +34,7 @@ public class SWTButton extends SWTComponent implements VirtualButton {
 
 	public SWTButton(Button theButton) {
 		super(theButton);
+		init();
 		// getButton() = theButton;
 
 	}
@@ -52,6 +54,10 @@ public class SWTButton extends SWTComponent implements VirtualButton {
 	public SWTButton() {
 
 	}
+//	@Override
+//	protected void subclassInit() {
+//		getButton().addSelectionListener(forwarder);
+//	}
 
 	public void init() {
 		super.init();

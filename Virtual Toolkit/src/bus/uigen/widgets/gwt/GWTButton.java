@@ -36,6 +36,7 @@ public class GWTButton extends GWTComponent implements VirtualButton {
 	public GWTButton(Button b) {
 		super(b);
 	}
+	
 
 	public void init() {
 		GWTButtonEventForwarder forwarder = new GWTButtonEventForwarder(this);

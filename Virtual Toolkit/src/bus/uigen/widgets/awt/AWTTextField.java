@@ -21,18 +21,29 @@ public class AWTTextField extends AWTTextComponent implements VirtualTextField {
 
 	public AWTTextField(TextField theTextField) {
 		super(theTextField);
+		init();
 		// getTextField() = theTextField;
 
 	}
 
 	public AWTTextField(String text) {
 		super(new TextField(text));
-		System.out.println(getTextField().getText());
+		init();
+//		System.out.println(getTextField().getText());
 	}
 
 	public AWTTextField() {
 		super(new TextField());
+		init();
 	}
+//	@Override
+//	protected void subclassInit() {
+//		AWTTextFieldEventForwarder forwarder = new AWTTextFieldEventForwarder(
+//				this);
+//		getTextField().addActionListener(forwarder);
+//		getTextField().addKeyListener(forwarder);
+//		getTextField().addMouseListener(forwarder);
+//	}
 
 	public void init() {
 		super.init();

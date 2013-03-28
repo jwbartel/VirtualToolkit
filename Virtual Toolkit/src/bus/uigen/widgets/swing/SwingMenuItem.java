@@ -31,16 +31,23 @@ public class SwingMenuItem extends CentralUniversalWidget implements
 	public Set<VirtualActionListener> getVirtualActionListeners() {
 		return vActionListeners;
 	}
-
+	@Override
+	public void init() {
+		super.init();
+		getMenuItem().addActionListener(new SwingMenuItemEventForwarder(this));
+	}
+	
 	// MenuItem menuItem;
 	public SwingMenuItem(JMenuItem theMenuItem) {
 		super(theMenuItem);
-		getMenuItem().addActionListener(new SwingMenuItemEventForwarder(this));
+		init();
+//		getMenuItem().addActionListener(new SwingMenuItemEventForwarder(this));
 
 		// menuItem = theMenuItem;
 	}
 
 	public SwingMenuItem() {
+//		init();
 		// super (new JMenuItem());
 		// getMenuItem().addActionListener(new
 		// SwingMenuItemEventForwarder(this));

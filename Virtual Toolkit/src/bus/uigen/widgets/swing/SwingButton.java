@@ -37,10 +37,17 @@ public class SwingButton extends SwingComponent implements VirtualButton {
 	public SwingButton() {
 
 	}
+	
+	protected void subclassInit() {
+		getButton().addActionListener(new SwingButtonEventForwarder(this));
+	}
 
 	public void init() {
-		getButton().addActionListener(new SwingButtonEventForwarder(this));
+//		subClassInit();
+//		getButton().addActionListener(new SwingButtonEventForwarder(this));
+//		subclassInit();
 		super.init();
+		subclassInit();
 	}
 
 	public Set<VirtualActionListener> getVirtualActionListeners() {

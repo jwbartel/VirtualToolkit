@@ -25,16 +25,23 @@ public class AWTMenuItem extends AWTMenuComponent implements VirtualMenuItem {
 	public Set<VirtualActionListener> getVirtualActionListeners() {
 		return vActionListeners;
 	}
+	@Override
+	public void init() {
+		super.init();
+		getMenuItem().addActionListener(new AWTMenuItemEventForwarder(this));
+	}
 
 	// MenuItem menuItem;
 	public AWTMenuItem(MenuItem theMenuItem) {
 		super(theMenuItem);
-		getMenuItem().addActionListener(new AWTMenuItemEventForwarder(this));
-		// menuItem = theMenuItem;
+		init();
+//		getMenuItem().addActionListener(new AWTMenuItemEventForwarder(this));
+//		// menuItem = theMenuItem;
 	}
 
 	public AWTMenuItem() {
-		getMenuItem().addActionListener(new AWTMenuItemEventForwarder(this));
+//		init();
+//		getMenuItem().addActionListener(new AWTMenuItemEventForwarder(this));
 
 	}
 

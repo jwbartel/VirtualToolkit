@@ -17,7 +17,7 @@ public class SwingCheckBox extends SwingComponent implements VirtualCheckBox {
 	// JCheckBox getJCheckBox();
 	public SwingCheckBox(JCheckBox theCheckBox) {
 		super(theCheckBox);
-		getJCheckBox().addActionListener(new SwingCheckBoxEventForwarder(this));
+//		getJCheckBox().addActionListener(new SwingCheckBoxEventForwarder(this));
 
 		// getJCheckBox() = theCheckBox;
 
@@ -26,10 +26,14 @@ public class SwingCheckBox extends SwingComponent implements VirtualCheckBox {
 	public SwingCheckBox() {
 
 	}
+	protected void subclassInit() {
+		getJCheckBox().addActionListener(new SwingCheckBoxEventForwarder(this));
+	}
+	
 
 	public void init(Component c) {
 		super.init(c);
-		getJCheckBox().addActionListener(new SwingCheckBoxEventForwarder(this));
+//		getJCheckBox().addActionListener(new SwingCheckBoxEventForwarder(this));
 	}
 
 	public JCheckBox getJCheckBox() {

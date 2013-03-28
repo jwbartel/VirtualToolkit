@@ -16,11 +16,24 @@ public class CentralUniversalWidget {
 	}
 
 	public CentralUniversalWidget() {
+		// do not initialize here because init will be called later
+//		init();
 
 	}
+	// not making it abstract as some subclasses will not have an init
+	protected void subclassInit() {
+		
+	}
+	// this should really not be called
+	public void init() {
+//		subclassInit();
+	}
+	
 
 	public void init(Object theComponent) {
 		component = theComponent;
+		init();
+//		subclassInit();
 	}
 
 	public Object getUserObject() {

@@ -23,6 +23,7 @@ public class SwingTextField extends SwingTextComponent implements
 
 	public SwingTextField(JTextField theTextField) {
 		super(theTextField);
+		init();
 		// getTextField() = theTextField;
 
 	}
@@ -38,6 +39,14 @@ public class SwingTextField extends SwingTextComponent implements
 	public JTextField getTextField() {
 		return (JTextField) component;
 	}
+//	@Override
+//	protected void subclassInit() {
+//		SwingTextFieldEventForwarder forwarder = new SwingTextFieldEventForwarder(
+//				this);
+//		getTextField().addActionListener(forwarder);
+//		getTextField().addKeyListener(forwarder);
+//		getTextField().addMouseListener(forwarder);
+//	}
 
 	public void init() {
 		super.init();

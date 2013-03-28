@@ -52,6 +52,11 @@ public class SWTTextField extends SWTComponent implements VirtualTextField {
 		// getTextField().setCaretPosition(newVal);
 
 	}
+//	@Override
+//	protected void subclassInit() {
+//		getTextField().addKeyListener(forwarder);
+//		getTextField().addMouseListener(forwarder);	}
+
 
 	public void init() {
 		super.init();

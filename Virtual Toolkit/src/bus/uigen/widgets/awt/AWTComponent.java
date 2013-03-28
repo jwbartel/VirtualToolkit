@@ -51,6 +51,7 @@ public abstract class AWTComponent extends CentralUniversalWidget implements
 	}
 
 	public void init() {
+//		super.init();
 		AWTComponentEventForwarder forwarder = new AWTComponentEventForwarder(
 				this);
 		getComponent().addFocusListener(forwarder);

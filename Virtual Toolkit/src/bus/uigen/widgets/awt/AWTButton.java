@@ -19,6 +19,7 @@ import bus.uigen.widgets.events.VirtualActionEvent;
 import bus.uigen.widgets.events.VirtualActionListener;
 import bus.uigen.widgets.events.VirtualActionListenerFactory;
 import bus.uigen.widgets.events.VirtualListener;
+import bus.uigen.widgets.swing.SwingTextFieldEventForwarder;
 
 public class AWTButton extends AWTComponent implements VirtualButton {
 	// AbstractButton getButton();
@@ -29,8 +30,12 @@ public class AWTButton extends AWTComponent implements VirtualButton {
 		super(theButton);
 		// getButton() = theButton;
 
-		// init();
+		 init();
 
+	}
+	@Override
+	protected void subclassInit() {
+		getButton().addActionListener(new AWTButtonEventForwarder(this));
 	}
 
 	public AWTButton() {
@@ -39,7 +44,8 @@ public class AWTButton extends AWTComponent implements VirtualButton {
 
 	public void init() {
 		super.init();
-		getButton().addActionListener(new AWTButtonEventForwarder(this));
+		subclassInit();
+//		getButton().addActionListener(new AWTButtonEventForwarder(this));
 	}
 
 	public Set<VirtualActionListener> getVirtualActionListeners() {
