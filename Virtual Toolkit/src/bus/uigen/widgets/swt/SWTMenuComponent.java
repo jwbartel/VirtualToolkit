@@ -83,6 +83,10 @@ public class SWTMenuComponent extends CentralUniversalWidget implements
 		// TODO Auto-generated method stub
 
 	}
+	
+	public Object getFontMetrics(Object f) {
+		return null;
+	}
 
 	@Override
 	public void setToolTipText(String s) {

@@ -2,6 +2,7 @@ package bus.uigen.widgets.awt;
 
 import java.awt.Event;
 import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.MenuItem;
 import java.util.HashSet;
 import java.util.Set;
@@ -89,6 +90,13 @@ public class AWTMenuItem extends AWTMenuComponent implements VirtualMenuItem {
 
 	public Font getFont() {
 		return getMenuItem().getFont();
+	}
+	public FontMetrics getFontMetrics(Font f) {
+		return null;
+	}
+	
+	public FontMetrics getFontMetrics(Object f) {
+		return null;
 	}
 
 	public static AWTMenuItem virtualMenuItem(MenuItem theMenuItem) {

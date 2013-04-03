@@ -397,6 +397,9 @@ public class Widget implements VirtualComponent {
 	public Object getFont() {
 		return component.getFont();
 	}
+	public Object getFontMetrics(Object f) {
+		return null;
+	}
 
 	public void addMouseListener(VirtualMouseListener listener) {
 		component.addMouseListener(listener);

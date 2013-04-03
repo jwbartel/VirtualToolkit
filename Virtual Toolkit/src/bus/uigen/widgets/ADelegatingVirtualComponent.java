@@ -1,5 +1,6 @@
 package bus.uigen.widgets;
 
+import java.awt.Font;
 import java.awt.event.MouseListener;
 
 import bus.uigen.widgets.events.VirtualFocusListener;
@@ -241,6 +242,11 @@ public class ADelegatingVirtualComponent implements VirtualComponent {
 	public Object getFont() {
 		return component.getFont();
 	}
+	
+	public Object getFontMetrics(Object font) {
+		return component.getFontMetrics ( font);
+	}
+
 
 	public boolean isVisible() {
 		return component.isVisible();

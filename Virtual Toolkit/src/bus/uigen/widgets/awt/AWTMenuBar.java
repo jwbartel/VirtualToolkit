@@ -1,6 +1,7 @@
 package bus.uigen.widgets.awt;
 
 import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Menu;
 import java.awt.MenuBar;
 
@@ -56,6 +57,13 @@ public class AWTMenuBar extends AWTMenuComponent implements VirtualMenuBar {
 	}
 
 	public Font getFont() {
+		return null;
+	}
+	public FontMetrics getFontMetrics(Font f) {
+		return null;
+	}
+	
+	public FontMetrics getFontMetrics(Object f) {
 		return null;
 	}
 

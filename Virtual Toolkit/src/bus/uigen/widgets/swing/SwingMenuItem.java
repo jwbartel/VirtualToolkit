@@ -3,6 +3,7 @@ package bus.uigen.widgets.swing;
 import java.awt.Component;
 import java.awt.Event;
 import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.event.ActionListener;
 import java.util.HashSet;
 import java.util.Set;
@@ -117,6 +118,14 @@ public class SwingMenuItem extends CentralUniversalWidget implements
 	public Font getFont() {
 		return getMenuItem().getFont();
 	}
+	public FontMetrics getFontMetrics(Font f) {
+		return getMenuItem().getFontMetrics(f);
+	}
+	
+	public FontMetrics getFontMetrics(Object f) {
+		return getMenuItem().getFontMetrics((Font) f);
+	}
+	
 
 	public void setActionCommand(String cmd) {
 		getMenuItem().setActionCommand(cmd);

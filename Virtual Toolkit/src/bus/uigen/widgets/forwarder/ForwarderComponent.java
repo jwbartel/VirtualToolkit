@@ -1,5 +1,8 @@
 package bus.uigen.widgets.forwarder;
 
+import java.awt.Font;
+import java.awt.FontMetrics;
+
 import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualDimension;
@@ -28,6 +31,10 @@ public abstract class ForwarderComponent extends CentralUniversalWidget
 	@Override
 	public Object getFont() {
 		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public FontMetrics getFontMetrics(Object f) {
 		return null;
 	}
 

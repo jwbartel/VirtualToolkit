@@ -2,6 +2,7 @@ package bus.uigen.widgets.swing;
 
 import java.awt.Component;
 import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Menu;
 import java.awt.MenuBar;
 
@@ -78,6 +79,15 @@ public class SwingMenuBar extends CentralUniversalWidget implements
 	public Font getFont() {
 		return getMenuBar().getFont();
 	}
+	public FontMetrics getFontMetrics(Font f) {
+		return getMenuBar().getFontMetrics(f);
+	}
+	
+	public FontMetrics getFontMetrics(Object f) {
+		return getMenuBar().getFontMetrics((Font) f);
+	}
+	
+	
 
 	// public VirtualComponent getComponentAtIndex(int i) {
 	public UniversalWidget getComponentAtIndex(int i) {

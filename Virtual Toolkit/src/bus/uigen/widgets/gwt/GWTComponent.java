@@ -1,5 +1,6 @@
 package bus.uigen.widgets.gwt;
 
+import java.awt.FontMetrics;
 import java.util.ArrayList;
 
 import bus.uigen.widgets.VirtualComponent;
@@ -280,6 +281,9 @@ public abstract class GWTComponent implements VirtualComponent {
 
 	public Object getFont() {
 		// TODO Auto-generated method stub
+		return null;
+	}
+	public FontMetrics getFontMetrics(Object f) {
 		return null;
 	}
 

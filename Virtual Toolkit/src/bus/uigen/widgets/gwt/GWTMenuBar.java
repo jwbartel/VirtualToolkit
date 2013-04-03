@@ -1,6 +1,7 @@
 package bus.uigen.widgets.gwt;
 
 import java.awt.Component;
+import java.awt.FontMetrics;
 
 import bus.uigen.widgets.UniversalWidget;
 import bus.uigen.widgets.VirtualMenu;
@@ -57,6 +58,9 @@ public class GWTMenuBar extends CentralUniversalWidget implements
 	@Override
 	public Object getFont() {
 		// TODO Auto-generated method stub
+		return null;
+	}
+	public FontMetrics getFontMetrics(Object f) {
 		return null;
 	}
 

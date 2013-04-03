@@ -154,6 +154,7 @@ public class SwingPopupMenu extends CentralUniversalWidget implements
 		return null;
 		// return getMenuBar().getFont();
 	}
+	
 
 	public void insertSeparator(int pos) {
 		// getJPopupMenu().insertSeparator(pos);
@@ -183,6 +184,12 @@ public class SwingPopupMenu extends CentralUniversalWidget implements
 	public void postEvent(Object event) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public Object getFontMetrics(Object f) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

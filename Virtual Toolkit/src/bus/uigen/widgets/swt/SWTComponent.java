@@ -368,6 +368,10 @@ public abstract class SWTComponent extends CentralUniversalWidget implements
 	public Font getFont() {
 		return null;
 	}
+	public Object getFontMetrics(Object f) {
+		return null;
+	}
+
 
 	public static VirtualComponent virtualComponent(Control c) {
 		return (VirtualComponent) CentralUniversalWidget.universalWidget(c);

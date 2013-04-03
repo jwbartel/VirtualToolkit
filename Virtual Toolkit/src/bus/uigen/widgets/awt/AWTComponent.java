@@ -5,6 +5,7 @@ import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Point;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseListener;
@@ -390,6 +391,17 @@ public abstract class AWTComponent extends CentralUniversalWidget implements
 	public Font getFont() {
 		return getComponent().getFont();
 	}
+	
+	
+
+	public FontMetrics getFontMetrics(Font f) {
+		return getComponent().getFontMetrics(f);
+	}
+	
+	public FontMetrics getFontMetrics(Object f) {
+		return getComponent().getFontMetrics((Font) f);
+	}
+
 
 	public void addMouseListener(VirtualMouseListener listener) {
 		vMouseListeners.add(listener);

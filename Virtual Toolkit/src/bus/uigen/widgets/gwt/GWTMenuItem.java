@@ -1,5 +1,6 @@
 package bus.uigen.widgets.gwt;
 
+import java.awt.FontMetrics;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Vector;
@@ -75,6 +76,9 @@ public class GWTMenuItem extends CentralUniversalWidget implements
 	@Override
 	public Object getFont() {
 		// TODO Auto-generated method stub
+		return null;
+	}
+	public FontMetrics getFontMetrics(Object f) {
 		return null;
 	}
 

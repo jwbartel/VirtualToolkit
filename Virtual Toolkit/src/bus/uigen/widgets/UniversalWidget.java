@@ -14,4 +14,6 @@ public interface UniversalWidget {
 	public void setFont(Object f);
 
 	public Object getFont();
+	
+	public Object getFontMetrics(Object f);
 }
