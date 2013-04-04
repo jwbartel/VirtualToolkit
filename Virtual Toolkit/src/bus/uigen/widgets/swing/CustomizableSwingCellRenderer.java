@@ -17,13 +17,18 @@ public class CustomizableSwingCellRenderer extends DefaultTableCellRenderer {
 	MatrixMap<Font> cellToFont = new AMatrixMap();
 	MatrixMap<Color> cellToBackground = new AMatrixMap();
 	MatrixMap<Color> cellToForeground = new AMatrixMap();
+//	String defaultToolTip;
+	Font defaultFont;
+	Color defaultBackground;
+	Color defaultForeground;
+	
 
 	@Override
 	public Component getTableCellRendererComponent(JTable table, Object value,
 			boolean isSelected, boolean hasFocus, int row, int column) {
 		Component component = super.getTableCellRendererComponent(table, value,
 				isSelected, hasFocus, row, column);
-	
+		setComponentAttributes(row, column, component);
 
 		return this;
 	}
@@ -36,28 +41,54 @@ public class CustomizableSwingCellRenderer extends DefaultTableCellRenderer {
 	}
 	
 	void setComponentToolTip(int aRow, int aColumn, Component aComponent) {
-		String toolTipText = cellToTooltipText.get(aRow, aColumn);
-		if (toolTipText != null && aComponent instanceof JComponent) {
-			((JComponent) aComponent).setToolTipText(toolTipText);			
+		
+//		if (toolTipText != null && aComponent instanceof JComponent) {
+		if (aComponent instanceof JComponent) {
+			JComponent aJComponent = (JComponent) aComponent;
+//			 if (defaultToolTip == null) {
+//				 defaultToolTip = aJComponent.getToolTipText();
+//			 }
+			String toolTipText = cellToTooltipText.get(aRow, aColumn);
+
+			if (toolTipText != null)
+			aJComponent.setToolTipText(toolTipText);
+			else
+				aJComponent.setToolTipText(null);
+
 		}
 	}
 	
 	void setComponentFont(int aRow, int aColumn, Component aComponent) {
+		if (defaultFont == null) {
+			defaultFont = aComponent.getFont();
+		}
 		Font font = cellToFont.get(aRow, aColumn);
 		if (font != null)
 			aComponent.setFont(font);
+		else
+			aComponent.setFont(defaultFont);
 	}
 	
 	void setComponentBackground(int aRow, int aColumn, Component aComponent) {
+		if (defaultBackground == null) {
+			defaultBackground = aComponent.getBackground();
+		}
 		Color background = cellToBackground.get(aRow, aColumn);
 		if (background != null)
 			aComponent.setBackground(background);
+		else
+			aComponent.setBackground(defaultBackground);
 	}
 	
 	void setComponentForeground(int aRow, int aColumn, Component aComponent) {
+		if (defaultForeground == null) {
+			defaultForeground = aComponent.getForeground();
+		}
 		Color foreground = cellToForeground.get(aRow, aColumn);
 		if (foreground != null)
 			aComponent.setForeground(foreground);
+		else
+			aComponent.setForeground(defaultForeground);
 	}
 	
 	String toString(int aRow, int aCol) {
