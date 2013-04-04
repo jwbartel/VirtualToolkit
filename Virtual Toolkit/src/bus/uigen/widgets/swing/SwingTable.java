@@ -88,7 +88,7 @@ public class SwingTable extends AWTContainer implements VirtualTable {
 	 * }
 	 */
 	public void setModel(TableModel model) {
-		getTable().setModel(model); // this should be there
+//		getTable().setModel(model); // this should be there
 		ProxyAbstractTableModel proxyModel = new ProxyAbstractTableModel(model);
 		this.model = proxyModel;
 		setModel(proxyModel);
@@ -103,6 +103,8 @@ public class SwingTable extends AWTContainer implements VirtualTable {
 	public void setModel(VirtualAbstractTableModel model) {
 		this.model = model;
 		model.setSwingTableParent(this);
+		getTable().setModel(model); // this should be there
+
 
 	}
 
