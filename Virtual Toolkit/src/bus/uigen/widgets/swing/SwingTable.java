@@ -1,10 +1,14 @@
 package bus.uigen.widgets.swing;
 
+import java.awt.Color;
+import java.awt.Font;
+
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.event.TableColumnModelListener;
 import javax.swing.table.TableCellEditor;
+import javax.swing.table.TableColumn;
 import javax.swing.table.TableModel;
 
 import bus.uigen.widgets.VirtualComponent;
@@ -18,6 +22,7 @@ import bus.uigen.widgets.table.VirtualTableModel;
 public class SwingTable extends AWTContainer implements VirtualTable {
 	// JTable getTable();
 	TableModel model;
+	CustomizableSwingCellRenderer cellRenderer = new CustomizableSwingCellRenderer();
 
 	public SwingTable(JTable theTable) {
 		super(theTable);
@@ -27,6 +32,21 @@ public class SwingTable extends AWTContainer implements VirtualTable {
 
 	public SwingTable() {
 
+	}
+	
+	void setCellRenderer() {
+		for (int i = 0; i < getTable().getColumnCount(); i ++) {
+		    TableColumn col = getTable().getColumnModel().getColumn(i);
+		    if (col.getCellRenderer() != cellRenderer)
+		    col.setCellRenderer(cellRenderer);
+		}		
+	}
+	
+
+	public void init() {
+
+		super.init();
+		setCellRenderer();
 	}
 
 	public SwingTable(int numRows, int numColumns) {
@@ -68,6 +88,7 @@ public class SwingTable extends AWTContainer implements VirtualTable {
 	 * }
 	 */
 	public void setModel(TableModel model) {
+		getTable().setModel(model); // this should be there
 		ProxyAbstractTableModel proxyModel = new ProxyAbstractTableModel(model);
 		this.model = proxyModel;
 		setModel(proxyModel);
@@ -154,6 +175,7 @@ public class SwingTable extends AWTContainer implements VirtualTable {
 
 	public void createDefaultColumnsFromModel() {
 		getTable().createDefaultColumnsFromModel();
+		setCellRenderer();
 	}
 
 	public void addColumnSelectionInterval(int col1, int col2) {
@@ -173,6 +195,14 @@ public class SwingTable extends AWTContainer implements VirtualTable {
 		getTable().getColumnModel().getColumn(colNum).setPreferredWidth(width);
 
 	}
+	
+	public void addColumn() {
+		TableColumn col = new TableColumn();
+		col.setCellRenderer(cellRenderer);
+		getTable().getColumnModel().addColumn(col);	
+	}
+	
+	
 
 	public void setRowHeight(int rowNum, int height) {
 		getTable().setRowHeight(rowNum, height);
@@ -235,5 +265,28 @@ public class SwingTable extends AWTContainer implements VirtualTable {
 	public TableModel getModel() {
 		return getTable().getModel();
 	}
+
+	@Override
+	public void setTooltipText(int aRow, int aCol, String newVal) {
+		cellRenderer.setTooltipText(aRow, aCol, newVal);
+	}
+
+	@Override
+	public void setFont(int aRow, int aCol, Font newVal) {
+		cellRenderer.setFont(aRow, aCol, newVal);
+		
+	}
+
+	@Override
+	public void setBackground(int aRow, int aCol, Color newVal) {
+		cellRenderer.setBackground(aRow, aCol, newVal);		
+	}
+
+	@Override
+	public void setForeground(int aRow, int aCol, Color newVal) {
+		cellRenderer.setForeground(aRow, aCol, newVal);		
+	}
+	
+	
 
 }

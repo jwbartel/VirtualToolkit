@@ -9,6 +9,9 @@ package bus.uigen.widgets.table;
 //import javax.swing.table.TableModel;
 //import javax.swing.table.TablePath;
 
+import java.awt.Color;
+import java.awt.Font;
+
 import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualContainer;
 
@@ -97,5 +100,11 @@ public interface VirtualTable extends VirtualContainer {
 
 	public Object getModel();
 	// public TableModel getModel();
+	public void addColumn();
+	public void setTooltipText (int aRow, int aCol, String newVal) ;
+	public void setFont (int aRow, int aCol, Font newVal) ;
+	public void setBackground (int aRow, int aCol, Color newVal) ;
+	
+	public void setForeground (int aRow, int aCol, Color newVal);
 
 }

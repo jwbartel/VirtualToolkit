@@ -1,5 +1,7 @@
 package bus.uigen.widgets.swt;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.util.Vector;
 
 import javax.swing.event.ListSelectionListener;
@@ -402,6 +404,36 @@ public class SWTTable extends SWTContainer implements VirtualTable {
 	public void setModel(Object model) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void addColumn() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setTooltipText(int aRow, int aCol, String newVal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setFont(int aRow, int aCol, Font newVal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setBackground(int aRow, int aCol, Color newVal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setForeground(int aRow, int aCol, Color newVal) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

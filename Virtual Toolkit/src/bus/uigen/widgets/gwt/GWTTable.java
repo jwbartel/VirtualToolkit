@@ -1,5 +1,8 @@
 package bus.uigen.widgets.gwt;
 
+import java.awt.Color;
+import java.awt.Font;
+
 import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.table.VirtualAbstractTableModel;
 import bus.uigen.widgets.table.VirtualTable;
@@ -187,6 +190,36 @@ public class GWTTable extends GWTContainer implements VirtualTable {
 	public Object getModel() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void addColumn() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setTooltipText(int aRow, int aCol, String newVal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setFont(int aRow, int aCol, Font newVal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setBackground(int aRow, int aCol, Color newVal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setForeground(int aRow, int aCol, Color newVal) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
