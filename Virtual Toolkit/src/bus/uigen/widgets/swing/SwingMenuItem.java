@@ -54,12 +54,14 @@ public class SwingMenuItem extends CentralUniversalWidget implements
 		// SwingMenuItemEventForwarder(this));
 
 	}
+	
+	// commenting this out as only CentralUniversalWidget should have this
 
-	public void init(Object theComponent) {
-		super.init(theComponent);
-		getMenuItem().addActionListener(new SwingMenuItemEventForwarder(this));
-
-	}
+//	public void init(Object theComponent) {
+//		super.init(theComponent);
+//		getMenuItem().addActionListener(new SwingMenuItemEventForwarder(this));
+//
+//	}
 
 	public Component getPhysicalComponent() {
 		return (Component) component;
