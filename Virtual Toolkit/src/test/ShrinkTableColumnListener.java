@@ -1,11 +1,11 @@
 package test;
 
-import bus.uigen.widgets.events.VirtualActionAdapter;
-import bus.uigen.widgets.events.VirtualActionEvent;
-import bus.uigen.widgets.table.VirtualTable;
 import bus.uigen.widgets.VirtualTextField;
+import bus.uigen.widgets.events.VirtualActionEvent;
+import bus.uigen.widgets.events.VirtualActionListener;
+import bus.uigen.widgets.table.VirtualTable;
 
-public class ShrinkTableColumnListener extends VirtualActionAdapter{
+public class ShrinkTableColumnListener implements VirtualActionListener{
 	VirtualTable table;
 	VirtualTextField text;
 	

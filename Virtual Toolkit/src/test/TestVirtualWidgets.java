@@ -33,12 +33,12 @@ public class TestVirtualWidgets {
 		VirtualToolkit.selectAWT();
 		VirtualFrame frame = FrameSelector.createFrame();
 		VirtualTextField textField = TextFieldSelector.createTextField("Edit Me");
-		textField.addActionListener(new TestActionListener());
+		//textField.addActionListener(new TestActionListener());
 		VirtualButton button = ButtonSelector.createButton("TestButton");
 		//button.addMouseListener(new TestMouseAdapter());
 		//button.addMouseListener(new TestAWTMouseListener());
 		//button.addMouseListener(new TestSWTMouseListener());
-		button.addActionListener(new TestActionListener());
+		//button.addActionListener(new TestActionListener());
 		Boolean[][] data = new Boolean[3][3];
 		String[] names = {"1","2","3"};
 		for(int i=0; i<3; i++){
