@@ -22,7 +22,7 @@ public class AdjustValueListener implements VirtualActionListener{
 	}
 	
 	public void actionPerformed(VirtualActionEvent e){
-		TableModel model = table.getModel();
+		TableModel model = (TableModel) table.getModel();
 		model.setValueAt(value.getText(), Integer.parseInt(row.getText()), Integer.parseInt(col.getText()));
 		
 	}
