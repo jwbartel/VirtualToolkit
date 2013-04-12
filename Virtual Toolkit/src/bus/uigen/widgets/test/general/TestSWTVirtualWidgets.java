@@ -1,37 +1,37 @@
-package test;
+package bus.uigen.widgets.test.general;
 
 
 
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-
+import bus.uigen.widgets.ButtonSelector;
 import bus.uigen.widgets.FrameSelector;
 import bus.uigen.widgets.GridLayoutSelector;
 import bus.uigen.widgets.Painter;
+import bus.uigen.widgets.PanelSelector;
+import bus.uigen.widgets.TextFieldSelector;
+import bus.uigen.widgets.VirtualButton;
+import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualFrame;
-import bus.uigen.widgets.VirtualGraphic;
 import bus.uigen.widgets.VirtualPainter;
+import bus.uigen.widgets.VirtualTextField;
 import bus.uigen.widgets.VirtualToolkit;
-import bus.uigen.widgets.awt.AWTDelegatePanel;
-import bus.uigen.widgets.awt.AWTGraphic;
 import bus.uigen.widgets.awt.AWTToolkit;
-import bus.uigen.widgets.awt.DelegatePanel;
+import bus.uigen.widgets.swt.SWTDelegatePanel;
+import bus.uigen.widgets.tree.TreeSelector;
+import bus.uigen.widgets.tree.VirtualTree;
 
-
-public class TestAWTVirtualWidgets {
+public class TestSWTVirtualWidgets {
 
 	/**
 	 * @param args
 	 */
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//VirtualToolkit.selectSwing();
+		//VirtualToolkit.selectAWT();
 		VirtualToolkit.setDefaultToolkit(new AWTToolkit());
-		//VirtualToolkit.selectSWT();
 		VirtualFrame frame = FrameSelector.createFrame();
 		
-	/*	
+		
 		VirtualTextField textField = TextFieldSelector.createTextField("Edit Me");
 		
 
@@ -51,7 +51,7 @@ public class TestAWTVirtualWidgets {
 		VirtualContainer rowPanel = PanelSelector.createPanel();
 		VirtualContainer textPanel = PanelSelector.createPanel();
 		
-		*/
+		
 		
 		//frame.setLayout(new SWTFlowLayout());
 		//frame.setLayout(FlowLayoutSelector.createFlowLayout());
@@ -60,7 +60,7 @@ public class TestAWTVirtualWidgets {
 		//frame.getContentPane().add(colPanel);
 		//frame.getContentPane().add(rowPanel);
 		
-	/*	textPanel.setLayout(GridLayoutSelector.createLayout(1, 4));
+		textPanel.setLayout(GridLayoutSelector.createLayout(1, 4));
 		//textPanel.setLayout(FlowLayoutSelector.createFlowLayout());
 		textPanel.add(textButton);
 		textPanel.add(textRow);
@@ -105,7 +105,7 @@ public class TestAWTVirtualWidgets {
 		button.addMouseListener(new TestMouseAdapter());
 		button.addMouseListener(new TestAWTMouseListener());
 		button.addMouseListener(new TestSWTMouseListener());
-		button.addActionListener(new TestActionListener());
+		//button.addActionListener(new TestActionListener());
 		//button.pack();
 		//frame.getContentPane().add(button);
 		//panel.add(button);
@@ -155,26 +155,89 @@ public class TestAWTVirtualWidgets {
 
 		treePanel.add(tree);
 		tree.setSize(400, 400);
-
-		frame.getContentPane().pack();*/
-
-		VirtualGraphic g = new AWTGraphic();
-	//	g.addDrawnObject(new VirtualLine(100,100, 200, 200));
-	//	g.addDrawnObject(new VirtualOval(200,200,50,50));
-	//	g.addDrawnObject((new VirtualRectangle(300,300,40,40)));
-	//	g.drawLine(100, 100, 200, 200);
-		Painter painter = new VirtualPainter();
-	//	painter.drawLine(100,100,200,200);
-	//	painter.drawRect(100,100,100,100);
-//		VirtualDelegatePanel panel = DelegatePanelSelector.createDelegatePanel();
+		//frame.getContentPane().add(treePanel);
 		
-		DelegatePanel panel3 = new DelegatePanel();
-	//	SWTPanel spanel = new SWTPanel();
-		System.out.println("AWTDelegatePanel instantiation");
-		AWTDelegatePanel panel2 = new AWTDelegatePanel(panel3);
+		
+		//colSmaller.addActionListener(new ShrinkTableColumnListener(table,colNum));
+		//colBigger.addActionListener(new GrowTableColumnListener(table,colNum));
+		//rowSmaller.addActionListener(new ShrinkTableRowListener(table,rowNum));
+		//rowBigger.addActionListener(new GrowTableRowListener(table,rowNum));
+		
+		//textButton.addActionListener(new AdjustValueListener(table,textVal,textRow, textCol));
+		
+		//button1.addActionListener(new ShrinkTableListener(table));
+		//button2.addActionListener(new ResizeTableListener(table));
+		//textField.addActionListener(new AdjustValueListener(table, textField));
+		//panel.add(table);
+		/*VirtualMenu menu = MenuSelector.createMenu("File");
+		VirtualMenu edit = MenuSelector.createMenu("Edit");
+		VirtualMenu help = MenuSelector.createMenu("Help");
+		VirtualMenu nestedmenu = MenuSelector.createMenu("Nested");
+		VirtualMenu nestedtwice = MenuSelector.createMenu("Birded");
+		VirtualMenuItem item = MenuItemSelector.createMenuItem("Item");
+		VirtualMenuItem item2 = MenuItemSelector.createMenuItem("Another Item");
+		VirtualMenuItem item3 = MenuItemSelector.createMenuItem("Item3");
+		VirtualMenuItem item4 = MenuItemSelector.createMenuItem("Item4");
+		VirtualMenuItem item5 = MenuItemSelector.createMenuItem("Item5");
+		VirtualMenuBar menubar = MenuBarSelector.createMenuBar("This is the MenuBar");
+		menubar.add(menu);
+		menubar.add(edit);
+		menubar.add(help);
+		//nestedmenu.add(item);
+		nestedmenu.add(item3);
+		nestedmenu.add(nestedtwice);
+		menu.add(nestedmenu);
+		nestedtwice.add(item4);
+		//menu.remove(nestedmenu);
+		nestedmenu.add(item5);
+		
+		menu.add(item);
+		menu.addSeparator();
+		//menu.add(item2);
+		menu.insert(item2, 0);
+		menu.insertSeparator(1);
+		menu.add("Yet Another Item!"); //this is not removable as we don't have the item reference
+		//menu.remove(item);
+		//menu.remove(nestedmenu);
+		nestedmenu.add("String!");
+		//menubar.remove(edit);
+		frame.setMenuBar(menubar);
+		*/
+		//System.out.println(AUniversalWidget.existingUniversalWidget(frame.getPhysicalComponent()));
+		//frame.getContentPane().setSize(750,750); //what can we do to get this to pack() instead?
+		//frame.pack(); //this does nothing now
+		frame.getContentPane().pack();
+		//VirtualMenu menu = MenuSelector.createMenu("Test Menu");
+		//VirtualMenuBar menuBar = MenuBarSelector.createMenuBar("MenuBar");
+		//VirtualMenuItem menuItem = MenuItemSelector.createMenuItem("MenuItem label");
+		// panel.add(menu); //a VirtualMenu is a VirtualContainer, not a VirtualComponent
+		//frame.getContentPane().add(menu);
+		//menuBar.add(menu);
+		//menu.add(menuItem);
+		//panel.add(menuBar); //VirtualMenuBar extends VirtualMenuComponent, not VComponent
+		//frame.getContentPane().add(menuBar); //frame only takes VirtualComponent arguments
+		//frame.setLayout(GridLayoutSelector.createLayout(1, 3));
+		/*frame.setSize(800, 400);
+		VirtualContainer panel1 = PanelSelector.createPanel();
+		VirtualContainer panel2 = PanelSelector.createPanel();
+		Object[] tree_data = {"One", "Apple","Blue"};
+		VirtualTree tree = TreeSelector.createTree(tree_data);
+		tree.setSize(200,200);
+		frame.setLayout(GridLayoutSelector.createLayout(1, 3));
+		frame.getContentPane().add(panel1);
+		frame.getContentPane().add(tree);
+		frame.getContentPane().add(panel2);*/
+		
+
+		SWTDelegatePanel panel2 = new SWTDelegatePanel();
+		Painter painter = new VirtualPainter();
+		panel2.addPainter(painter);
+		
+		
+		
 //		panel2.virtualDelegatePanel((DelegatePanel) panel);
 //		painter.paint(g);
-		panel2.addPainter(painter);
+//		panel2.addPainter(painter);
 //		panel2.
 //		panel.addPaintListener(g);
 		//VirtualContainer graphicPanel = PanelSelector.createPanel();
@@ -186,24 +249,6 @@ public class TestAWTVirtualWidgets {
 		//graphicPanel.addPaintListener(g);
 	//	frame.
 		frame.setSize(400, 400);
-
-		
-
-	    frame.addWindowListener(new WindowAdapter() {
-
-	       public void windowClosing(WindowEvent winEvent) {
-
-	          System.exit(0);
-
-	       }
-
-	    });
-		
-	//	    frame.add
-		
-
-		 //   canvas.addMouseListener(this);
-		
 //		frame.getContentPane().add(g)
 		/*( (Shell) frame.getContentPane().getPhysicalComponent()).addPaintListener(new PaintListener(){
 	        public void paintControl(PaintEvent e){

@@ -1,4 +1,4 @@
-package test3D;
+package bus.uigen.widgets.test.graphics3D;
 
 import java.applet.Applet;
 

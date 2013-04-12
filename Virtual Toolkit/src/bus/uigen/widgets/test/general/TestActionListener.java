@@ -1,4 +1,4 @@
-package test;
+package bus.uigen.widgets.test.general;
 
 
 import java.awt.event.ActionEvent;
