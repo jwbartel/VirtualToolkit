@@ -1,4 +1,4 @@
-package test;
+package bus.uigen.widgets.test.general;
 
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.MouseListener;

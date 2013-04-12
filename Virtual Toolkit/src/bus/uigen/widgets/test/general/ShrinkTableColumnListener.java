@@ -1,4 +1,4 @@
-package test;
+package bus.uigen.widgets.test.general;
 
 import bus.uigen.widgets.VirtualTextField;
 import bus.uigen.widgets.events.VirtualActionEvent;
