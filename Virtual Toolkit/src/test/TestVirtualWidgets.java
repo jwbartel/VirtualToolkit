@@ -17,6 +17,7 @@ import bus.uigen.widgets.VirtualMenuItem;
 import bus.uigen.widgets.VirtualScrollPane;
 import bus.uigen.widgets.VirtualTextField;
 import bus.uigen.widgets.VirtualToolkit;
+import bus.uigen.widgets.awt.AWTToolkit;
 import bus.uigen.widgets.swing.SwingScrollableTable;
 import bus.uigen.widgets.table.VirtualScrollableTable;
 
@@ -30,7 +31,7 @@ public class TestVirtualWidgets {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//VirtualToolkit.selectSwing();
-		VirtualToolkit.selectAWT();
+		VirtualToolkit.setDefaultToolkit(new AWTToolkit());
 		VirtualFrame frame = FrameSelector.createFrame();
 		VirtualTextField textField = TextFieldSelector.createTextField("Edit Me");
 		//textField.addActionListener(new TestActionListener());

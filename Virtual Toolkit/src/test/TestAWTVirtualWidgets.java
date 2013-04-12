@@ -14,6 +14,7 @@ import bus.uigen.widgets.VirtualPainter;
 import bus.uigen.widgets.VirtualToolkit;
 import bus.uigen.widgets.awt.AWTDelegatePanel;
 import bus.uigen.widgets.awt.AWTGraphic;
+import bus.uigen.widgets.awt.AWTToolkit;
 import bus.uigen.widgets.awt.DelegatePanel;
 
 
@@ -26,7 +27,7 @@ public class TestAWTVirtualWidgets {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//VirtualToolkit.selectSwing();
-		VirtualToolkit.selectAWT();
+		VirtualToolkit.setDefaultToolkit(new AWTToolkit());
 		//VirtualToolkit.selectSWT();
 		VirtualFrame frame = FrameSelector.createFrame();
 		
