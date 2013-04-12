@@ -6,9 +6,9 @@ import bus.uigen.widgets.GridLayoutSelector;
 import bus.uigen.widgets.VirtualButton;
 import bus.uigen.widgets.VirtualFrame;
 import bus.uigen.widgets.VirtualToolkit;
-import bus.uigen.widgets.awt.AWTToolkit;
 import bus.uigen.widgets.events.VirtualActionEvent;
 import bus.uigen.widgets.events.VirtualActionListener;
+import bus.uigen.widgets.swing.SwingToolkit;
 
 class  ButtonAction implements VirtualActionListener{
 	String action;
@@ -26,7 +26,7 @@ public class GeneralTestVirtualToolkit{
 	
 	public static void main(String[] args){
 		
-		VirtualToolkit.setDefaultToolkit(new AWTToolkit());
+		VirtualToolkit.setDefaultToolkit(new SwingToolkit());
 		//VirtualToolkit.selectSwing();
 		//VirtualToolkit.selectSWT();
 		
