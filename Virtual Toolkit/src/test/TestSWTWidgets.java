@@ -2,11 +2,6 @@ package test;
 
 
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Combo;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Menu;
-import org.eclipse.swt.widgets.MenuItem;
-import org.eclipse.swt.widgets.Text;
 
 /*import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
@@ -17,8 +12,6 @@ import bus.uigen.widgets.swt.Button;
 import bus.uigen.widgets.swt.Composite;
 import bus.uigen.widgets.swt.Display;
 import bus.uigen.widgets.swt.Shell;
-
-import bus.uigen.widgets.swt.SWTTable;
 
 public class TestSWTWidgets {
 

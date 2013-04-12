@@ -6,8 +6,6 @@ import java.awt.*;
 
 import java.awt.event.*;
 
-import java.awt.event.WindowAdapter;
-
 import com.sun.j3d.utils.applet.MainFrame;
 
 import com.sun.j3d.utils.universe.*;

@@ -2,7 +2,7 @@ package test;
 
 import bus.uigen.widgets.events.VirtualActionAdapter;
 import bus.uigen.widgets.events.VirtualActionEvent;
-import bus.uigen.widgets.VirtualTable;
+import bus.uigen.widgets.table.VirtualTable;
 import bus.uigen.widgets.VirtualTextField;
 
 import javax.swing.table.TableModel;

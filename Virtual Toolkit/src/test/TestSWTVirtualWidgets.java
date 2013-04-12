@@ -2,64 +2,20 @@ package test;
 
 
 
-import bus.uigen.widgets.AUniversalWidget;
 import bus.uigen.widgets.ButtonSelector;
-import bus.uigen.widgets.ComboBoxSelector;
-import bus.uigen.widgets.DelegatePanelSelector;
-import bus.uigen.widgets.FlowLayoutSelector;
 import bus.uigen.widgets.FrameSelector;
 import bus.uigen.widgets.GridLayoutSelector;
-import bus.uigen.widgets.LabelSelector;
-import bus.uigen.widgets.MenuBarSelector;
-import bus.uigen.widgets.MenuItemSelector;
-import bus.uigen.widgets.MenuSelector;
 import bus.uigen.widgets.Painter;
 import bus.uigen.widgets.PanelSelector;
-import bus.uigen.widgets.TableSelector;
 import bus.uigen.widgets.TextFieldSelector;
-import bus.uigen.widgets.TreeSelector;
 import bus.uigen.widgets.VirtualButton;
-import bus.uigen.widgets.VirtualComboBox;
-import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualContainer;
-import bus.uigen.widgets.VirtualDelegatePanel;
 import bus.uigen.widgets.VirtualFrame;
-import bus.uigen.widgets.VirtualGraphic;
-import bus.uigen.widgets.VirtualGraphicAWT;
 import bus.uigen.widgets.VirtualPainter;
-import bus.uigen.widgets.graphics.VirtualLine;
-import bus.uigen.widgets.graphics.VirtualRectangle;
-import bus.uigen.widgets.VirtualLabel;
-import bus.uigen.widgets.VirtualMenu;
-import bus.uigen.widgets.VirtualMenuBar;
-import bus.uigen.widgets.VirtualMenuItem;
-import bus.uigen.widgets.graphics.VirtualOval;
-import bus.uigen.widgets.VirtualScrollableTable;
 import bus.uigen.widgets.VirtualTextField;
-import bus.uigen.widgets.VirtualTable;
 import bus.uigen.widgets.VirtualToolkit;
-import bus.uigen.widgets.VirtualTree;
-import bus.uigen.widgets.swt.SWTFlowLayout;
-import bus.uigen.widgets.awt.AWTDelegatePanel;
-import bus.uigen.widgets.awt.AWTDelegatePanelFactory;
-import bus.uigen.widgets.awt.AWTFlowLayout;
-import bus.uigen.widgets.awt.AWTGraphic;
-import bus.uigen.widgets.awt.DelegatePanel;
-import bus.uigen.widgets.swing.SwingTree;
-import bus.uigen.widgets.swt.SWTComponent;
-import bus.uigen.widgets.swt.SWTDelegatePanel;
-import bus.uigen.widgets.swt.SWTGraphic;
-import bus.uigen.widgets.swt.SWTPanel;
-import bus.uigen.widgets.swt.SWTTree;
-import bus.uigen.widgets.ScrollableTableSelector;
-
-
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.events.PaintEvent;
-import org.eclipse.swt.events.PaintListener;
+import bus.uigen.widgets.tree.TreeSelector;
+import bus.uigen.widgets.tree.VirtualTree;
 
 public class TestSWTVirtualWidgets {
 

@@ -1,11 +1,7 @@
 package bus.uigen.widgets;
 
-import java.awt.Graphics;
-import java.util.ArrayList;
 
-import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.events.PaintListener;
-import org.eclipse.swt.graphics.Device;
 
 public interface VirtualGraphic extends PaintListener{
 	
