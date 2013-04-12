@@ -1,6 +1,5 @@
 package bus.uigen.widgets.graphics3D;
 
-import javax.media.j3d.Node;
 import javax.media.j3d.Transform3D;
 import javax.vecmath.Vector3d;
 import javax.vecmath.Vector3f;

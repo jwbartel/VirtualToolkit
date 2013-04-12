@@ -6,11 +6,7 @@ import java.applet.Applet;
 
 import java.awt.*;
 
-import java.awt.event.*;
-
 import com.sun.j3d.utils.applet.MainFrame;
-
-import com.sun.j3d.utils.geometry.*;
 
 import com.sun.j3d.utils.universe.*;
 

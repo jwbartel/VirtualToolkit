@@ -1,6 +1,5 @@
 package bus.uigen.widgets;
 
-import java.awt.Font;
 import java.awt.event.MouseListener;
 
 import bus.uigen.widgets.events.VirtualFocusListener;

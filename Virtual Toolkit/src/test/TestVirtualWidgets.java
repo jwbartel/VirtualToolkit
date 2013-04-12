@@ -1,7 +1,5 @@
 package test;
 
-import bus.uigen.widgets.swing.SwingTable;
-import bus.uigen.widgets.swing.SwingScrollableTable;
 import bus.uigen.widgets.ButtonSelector;
 import bus.uigen.widgets.FrameSelector;
 import bus.uigen.widgets.MenuBarSelector;
@@ -9,7 +7,6 @@ import bus.uigen.widgets.MenuItemSelector;
 import bus.uigen.widgets.MenuSelector;
 import bus.uigen.widgets.PanelSelector;
 import bus.uigen.widgets.ScrollPaneSelector;
-import bus.uigen.widgets.TableSelector;
 import bus.uigen.widgets.TextFieldSelector;
 import bus.uigen.widgets.VirtualButton;
 import bus.uigen.widgets.VirtualContainer;
@@ -17,11 +14,11 @@ import bus.uigen.widgets.VirtualFrame;
 import bus.uigen.widgets.VirtualMenu;
 import bus.uigen.widgets.VirtualMenuBar;
 import bus.uigen.widgets.VirtualMenuItem;
-import bus.uigen.widgets.VirtualTable;
-import bus.uigen.widgets.VirtualScrollableTable;
+import bus.uigen.widgets.VirtualScrollPane;
 import bus.uigen.widgets.VirtualTextField;
 import bus.uigen.widgets.VirtualToolkit;
-import bus.uigen.widgets.VirtualScrollPane;
+import bus.uigen.widgets.swing.SwingScrollableTable;
+import bus.uigen.widgets.table.VirtualScrollableTable;
 
 public class TestVirtualWidgets {
 	
