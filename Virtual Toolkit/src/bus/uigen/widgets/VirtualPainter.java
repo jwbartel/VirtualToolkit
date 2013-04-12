@@ -1,13 +1,6 @@
 package bus.uigen.widgets;
 
-import java.awt.Graphics;
-import java.util.ArrayList;
-
-import org.eclipse.swt.events.PaintEvent;
-import org.eclipse.swt.graphics.Device;
-import org.eclipse.swt.widgets.Display;
-
-import bus.uigen.widgets.awt.AWTGraphic;
+import bus.uigen.widgets.exceptions.VirtualException;
 import bus.uigen.widgets.graphics.VirtualOval;
 import bus.uigen.widgets.graphics.VirtualRectangle;
 
@@ -16,6 +9,14 @@ public class VirtualPainter implements Painter {
 	public VirtualPainter()
 	{
 		
+	}
+	
+	public void paint(Object o){
+		if( o instanceof VirtualGraphic){
+			paint((VirtualGraphic) o);
+		}else{
+			throw new VirtualException("A VirtualPainter can only paint objects of type VirtualGraphic");
+		}
 	}
 	
 	public void paint(VirtualGraphic g) {
