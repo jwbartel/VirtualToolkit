@@ -24,12 +24,12 @@ import javax.swing.border.Border;
 import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualDimension;
+import bus.uigen.widgets.VirtualGraphic;
 import bus.uigen.widgets.VirtualPoint;
 import bus.uigen.widgets.VirtualToolkit;
 import bus.uigen.widgets.events.VirtualFocusListener;
 import bus.uigen.widgets.events.VirtualMouseListener;
 import bus.uigen.widgets.events.VirtualMouseMoveListener;
-import bus.uigen.widgets.graphics.VirtualGraphic;
 
 public class Widget implements VirtualComponent {
 	VirtualComponent component;
