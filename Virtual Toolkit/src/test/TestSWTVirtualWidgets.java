@@ -14,6 +14,7 @@ import bus.uigen.widgets.VirtualFrame;
 import bus.uigen.widgets.VirtualPainter;
 import bus.uigen.widgets.VirtualTextField;
 import bus.uigen.widgets.VirtualToolkit;
+import bus.uigen.widgets.swt.SWTDelegatePanel;
 import bus.uigen.widgets.tree.TreeSelector;
 import bus.uigen.widgets.tree.VirtualTree;
 
