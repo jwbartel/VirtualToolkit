@@ -104,7 +104,7 @@ public class TestSWTVirtualWidgets {
 		button.addMouseListener(new TestMouseAdapter());
 		button.addMouseListener(new TestAWTMouseListener());
 		button.addMouseListener(new TestSWTMouseListener());
-		button.addActionListener(new TestActionListener());
+		//button.addActionListener(new TestActionListener());
 		//button.pack();
 		//frame.getContentPane().add(button);
 		//panel.add(button);

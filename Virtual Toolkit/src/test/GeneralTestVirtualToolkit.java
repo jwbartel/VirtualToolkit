@@ -1,9 +1,15 @@
 package test;
 
-import bus.uigen.widgets.*;
-import bus.uigen.widgets.events.*;
+import bus.uigen.widgets.ButtonSelector;
+import bus.uigen.widgets.FrameSelector;
+import bus.uigen.widgets.GridLayoutSelector;
+import bus.uigen.widgets.VirtualButton;
+import bus.uigen.widgets.VirtualFrame;
+import bus.uigen.widgets.VirtualToolkit;
+import bus.uigen.widgets.events.VirtualActionEvent;
+import bus.uigen.widgets.events.VirtualActionListener;
 
-class  ButtonAction extends VirtualActionAdapter{
+class  ButtonAction implements VirtualActionListener{
 	String action;
 	public ButtonAction(String a){action = a;}
 	

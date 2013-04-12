@@ -1,9 +1,9 @@
 package test;
 
-import bus.uigen.widgets.events.VirtualMouseAdapter;
 import bus.uigen.widgets.events.VirtualMouseEvent;
+import bus.uigen.widgets.events.VirtualMouseListener;
 
-public class TestMouseAdapter extends VirtualMouseAdapter{
+public class TestMouseAdapter implements VirtualMouseListener{
 	public void mouseClicked(VirtualMouseEvent e){
 		try{
 			System.out.println("TestMouseAdapter clicked");
@@ -20,9 +20,25 @@ public class TestMouseAdapter extends VirtualMouseAdapter{
 		}
 	}
 	
+	public void mouseExit(VirtualMouseEvent e){
+		try{
+			System.out.println("TestMouseAdapter exit");
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+	}
+	
 	public void mouseEntered(VirtualMouseEvent e){
 		try{
 			System.out.println("TestMouseAdapter entered");
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+	}
+	
+	public void mouseEnter(VirtualMouseEvent e){
+		try{
+			System.out.println("TestMouseAdapter enter");
 		}catch(Exception ex){
 			ex.printStackTrace();
 		}
@@ -36,9 +52,25 @@ public class TestMouseAdapter extends VirtualMouseAdapter{
 		}
 	}
 	
+	public void mouseDown(VirtualMouseEvent e){
+		try{
+			System.out.println("TestMouseAdapter down");
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+	}
+	
 	public void mouseReleased(VirtualMouseEvent e){
 		try{
 			//System.out.println("TestMouseAdapter released");
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+	}
+	
+	public void mouseUp(VirtualMouseEvent e){
+		try{
+			System.out.println("TestMouseAdapter up");
 		}catch(Exception ex){
 			ex.printStackTrace();
 		}
