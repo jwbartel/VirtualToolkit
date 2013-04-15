@@ -11,6 +11,7 @@ import java.awt.event.KeyListener;
 import javax.swing.border.Border;
 
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Shell;
 
@@ -46,7 +47,11 @@ public class SWTFrame extends SWTContainer implements VirtualFrame,
 	}
 
 	public void init() {
-		super.init();
+		if(component instanceof Display){
+			//This cannot add listeners because it is not of type Control
+		}else{
+			super.init();
+		}
 	}
 
 	public Shell getShell() { // getFrame()
