@@ -22,6 +22,7 @@ import bus.uigen.widgets.ScrollPaneSelector;
 import bus.uigen.widgets.SliderSelector;
 import bus.uigen.widgets.SpinnerSelector;
 import bus.uigen.widgets.SplitPaneSelector;
+import bus.uigen.widgets.TabbedPaneSelector;
 import bus.uigen.widgets.TextAreaSelector;
 import bus.uigen.widgets.TextFieldSelector;
 import bus.uigen.widgets.ToolBarSelector;
@@ -38,6 +39,7 @@ import bus.uigen.widgets.swing.SwingScrollableTableFactory;
 import bus.uigen.widgets.swing.SwingSliderFactory;
 import bus.uigen.widgets.swing.SwingSpinnerFactory;
 import bus.uigen.widgets.swing.SwingSplitPaneFactory;
+import bus.uigen.widgets.swing.SwingTabbedPaneFactory;
 import bus.uigen.widgets.swing.SwingTableFactory;
 import bus.uigen.widgets.swing.SwingToolBarFactory;
 import bus.uigen.widgets.swing.SwingTreeFactory;
@@ -107,6 +109,7 @@ public class AWTToolkit extends VirtualToolkit {
 		TreeSelector.setTreeFactory(new SwingTreeFactory());
 		TableSelector.setTableFactory(new SwingTableFactory());
 		SpinnerSelector.setSpinnerFactory(new SwingSpinnerFactory());
+		TabbedPaneSelector.setTabbedPaneFactory(new SwingTabbedPaneFactory());
 	}
 
 	public boolean maybeRegisterWidgets() {

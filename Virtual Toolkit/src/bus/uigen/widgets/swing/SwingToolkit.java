@@ -22,6 +22,7 @@ import bus.uigen.widgets.ScrollPaneSelector;
 import bus.uigen.widgets.SliderSelector;
 import bus.uigen.widgets.SpinnerSelector;
 import bus.uigen.widgets.SplitPaneSelector;
+import bus.uigen.widgets.TabbedPaneSelector;
 import bus.uigen.widgets.TextAreaSelector;
 import bus.uigen.widgets.TextFieldSelector;
 import bus.uigen.widgets.ToolBarSelector;
@@ -105,7 +106,7 @@ public class SwingToolkit extends VirtualToolkit {
 		TextFieldSelector.setTextFieldFactory(new SwingTextFieldFactory());
 		ToolBarSelector.setToolBarFactory(new SwingToolBarFactory());
 		TreeSelector.setTreeFactory(new SwingTreeFactory());
-		TableSelector.setTableFactory(new SwingTableFactory());
+		TabbedPaneSelector.setTabbedPaneFactory(new SwingTabbedPaneFactory());
 		FlowLayoutSelector.setFlowLayoutFactory(new AWTFlowLayoutFactory());
 		NumberFormatSelector
 				.setNumberFormatFactory(new AWTNumberFormatFactory());
