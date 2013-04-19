@@ -1,4 +1,4 @@
-package bus.uigen.widgets;
+package bus.uigen.widgets.graphics;
 
 import java.applet.Applet;
 import java.awt.*;

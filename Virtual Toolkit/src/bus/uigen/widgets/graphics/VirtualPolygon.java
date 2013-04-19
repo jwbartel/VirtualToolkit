@@ -6,8 +6,6 @@ import java.awt.Graphics2D;
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.graphics.GC;
 
-import bus.uigen.widgets.VirtualGraphic;
-import bus.uigen.widgets.VirtualGraphicObject;
 
 public class VirtualPolygon implements VirtualGraphicObject{
 

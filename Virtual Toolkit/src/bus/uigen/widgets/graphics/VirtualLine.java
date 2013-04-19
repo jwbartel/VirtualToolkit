@@ -1,5 +1,12 @@
 package bus.uigen.widgets.graphics;
 
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.geom.Line2D;
+
+import org.eclipse.swt.events.PaintEvent;
+import org.eclipse.swt.graphics.GC;
+
 public class VirtualLine implements VirtualGraphicObject {
 	private int x1;
 	private int y1;
@@ -27,5 +34,32 @@ public class VirtualLine implements VirtualGraphicObject {
 
 	public int getY2() {
 		return y2;
+	}
+	
+	public void paintObject(PaintEvent e)
+	{
+		e.gc.drawLine(x1, y1, x2, y2);
+	}
+	
+	public void paintObject(Graphics g)
+	{
+		g.drawLine(x1, y1, x2, y2);
+	}
+
+	
+	public void paintObject(VirtualGraphic g) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void fill(Graphics2D g2) {
+	//	Graphics2D g2 = (Graphics2D)g;
+		Line2D.Double oval = new Line2D.Double(x1, y1, x2, y2);
+		g2.fill(oval);
+		
+	}
+
+	public void fill(GC gc) {
+		gc.drawLine(x1, y1, x2, y2);
 	}
 }

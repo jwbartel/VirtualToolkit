@@ -7,8 +7,8 @@ import org.eclipse.swt.graphics.Device;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 
-import bus.uigen.widgets.VirtualGraphic;
-import bus.uigen.widgets.VirtualGraphicObject;
+import bus.uigen.widgets.graphics.VirtualGraphic;
+import bus.uigen.widgets.graphics.VirtualGraphicObject;
 
 public class SWTGraphic implements VirtualGraphic{
 //	ArrayList<VirtualGraphicObject> drawnElements = new ArrayList<VirtualGraphicObject>();

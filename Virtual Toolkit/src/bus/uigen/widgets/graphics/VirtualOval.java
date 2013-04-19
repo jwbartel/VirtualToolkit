@@ -7,8 +7,6 @@ import java.awt.geom.Ellipse2D;
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.graphics.GC;
 
-import bus.uigen.widgets.VirtualGraphic;
-import bus.uigen.widgets.VirtualGraphicObject;
 
 public class VirtualOval implements VirtualGraphicObject{
 	private int x1;
