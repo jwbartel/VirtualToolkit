@@ -9,13 +9,13 @@ import bus.uigen.widgets.FrameSelector;
 import bus.uigen.widgets.GridLayoutSelector;
 import bus.uigen.widgets.Painter;
 import bus.uigen.widgets.VirtualFrame;
-import bus.uigen.widgets.VirtualGraphic;
 import bus.uigen.widgets.VirtualPainter;
 import bus.uigen.widgets.VirtualToolkit;
 import bus.uigen.widgets.awt.AWTDelegatePanel;
 import bus.uigen.widgets.awt.AWTGraphic;
 import bus.uigen.widgets.awt.AWTToolkit;
 import bus.uigen.widgets.awt.DelegatePanel;
+import bus.uigen.widgets.graphics.VirtualGraphic;
 
 
 public class TestAWTVirtualWidgets {

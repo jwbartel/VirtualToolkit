@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 import org.eclipse.swt.events.PaintEvent;
 
-import bus.uigen.widgets.VirtualGraphic;
-import bus.uigen.widgets.VirtualGraphicObject;
+import bus.uigen.widgets.graphics.VirtualGraphic;
+import bus.uigen.widgets.graphics.VirtualGraphicObject;
 import bus.uigen.widgets.graphics.VirtualLine;
 import bus.uigen.widgets.graphics.VirtualOval;
 import bus.uigen.widgets.graphics.VirtualRectangle;

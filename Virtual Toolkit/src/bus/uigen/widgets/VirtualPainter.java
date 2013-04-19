@@ -1,6 +1,7 @@
 package bus.uigen.widgets;
 
 import bus.uigen.widgets.exceptions.VirtualException;
+import bus.uigen.widgets.graphics.VirtualGraphic;
 import bus.uigen.widgets.graphics.VirtualOval;
 import bus.uigen.widgets.graphics.VirtualRectangle;
 

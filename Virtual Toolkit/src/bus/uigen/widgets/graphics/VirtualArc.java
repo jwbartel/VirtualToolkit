@@ -3,8 +3,6 @@ package bus.uigen.widgets.graphics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import bus.uigen.widgets.VirtualGraphic;
-import bus.uigen.widgets.VirtualGraphicObject;
 
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.graphics.GC;

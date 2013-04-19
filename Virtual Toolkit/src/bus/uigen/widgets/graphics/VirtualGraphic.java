@@ -1,7 +1,8 @@
-package bus.uigen.widgets;
+package bus.uigen.widgets.graphics;
 
 
 import org.eclipse.swt.events.PaintListener;
+
 
 public interface VirtualGraphic extends PaintListener{
 	
