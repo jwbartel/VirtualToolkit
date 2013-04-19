@@ -1,16 +1,25 @@
 package bus.uigen.widgets.test.graphics3D;
 
-import com.sun.j3d.utils.geometry.*;
-
-import com.sun.j3d.utils.universe.*;
-
-import com.sun.j3d.utils.image.*;
-
-import javax.media.j3d.*;
-
-import javax.vecmath.*;
-
 import java.awt.Container;
+import java.io.File;
+
+import javax.media.j3d.AmbientLight;
+import javax.media.j3d.Appearance;
+import javax.media.j3d.BoundingSphere;
+import javax.media.j3d.BranchGroup;
+import javax.media.j3d.DirectionalLight;
+import javax.media.j3d.Material;
+import javax.media.j3d.Texture;
+import javax.media.j3d.TextureAttributes;
+import javax.vecmath.Color3f;
+import javax.vecmath.Color4f;
+import javax.vecmath.Point3d;
+import javax.vecmath.Vector3f;
+
+import com.sun.j3d.utils.geometry.Primitive;
+import com.sun.j3d.utils.geometry.Sphere;
+import com.sun.j3d.utils.image.TextureLoader;
+import com.sun.j3d.utils.universe.SimpleUniverse;
 
 public class TestAWT3D {
 
@@ -34,7 +43,7 @@ public TestAWT3D() {
 
    // Set up the texture map
 
-   TextureLoader loader = new TextureLoader("C:/Documents and Settings/Administrator/Desktop/Arizona.jpg",
+   TextureLoader loader = new TextureLoader("src/bus/uigen/widgets/test/graphics3D/Arizona.jpg",
 
       "LUMINANCE", new Container());
 

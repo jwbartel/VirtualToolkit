@@ -13,9 +13,9 @@ import bus.uigen.widgets.VirtualContainer;
 import bus.uigen.widgets.VirtualFrame;
 import bus.uigen.widgets.VirtualTextField;
 import bus.uigen.widgets.VirtualToolkit;
-import bus.uigen.widgets.awt.AWTToolkit;
 import bus.uigen.widgets.graphics.VirtualPainter;
 import bus.uigen.widgets.swt.SWTDelegatePanel;
+import bus.uigen.widgets.swt.SWTToolkit;
 import bus.uigen.widgets.tree.TreeSelector;
 import bus.uigen.widgets.tree.VirtualTree;
 
@@ -28,7 +28,7 @@ public class TestSWTVirtualWidgets {
 		// TODO Auto-generated method stub
 		//VirtualToolkit.selectSwing();
 		//VirtualToolkit.selectAWT();
-		VirtualToolkit.setDefaultToolkit(new AWTToolkit());
+		VirtualToolkit.setDefaultToolkit(new SWTToolkit());
 		VirtualFrame frame = FrameSelector.createFrame();
 		
 		
