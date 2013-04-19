@@ -1,9 +1,7 @@
-package bus.uigen.widgets;
+package bus.uigen.widgets.graphics;
 
+import bus.uigen.widgets.Painter;
 import bus.uigen.widgets.exceptions.VirtualException;
-import bus.uigen.widgets.graphics.VirtualGraphic;
-import bus.uigen.widgets.graphics.VirtualOval;
-import bus.uigen.widgets.graphics.VirtualRectangle;
 
 public class VirtualPainter implements Painter {
 
