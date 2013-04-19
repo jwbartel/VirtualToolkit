@@ -1,6 +1,5 @@
 package bus.uigen.widgets;
 
-import java.awt.event.MouseListener;
 
 import bus.uigen.widgets.events.VirtualFocusListener;
 import bus.uigen.widgets.events.VirtualMouseListener;
@@ -401,7 +400,7 @@ public class ADelegatingVirtualComponent implements VirtualComponent {
 
 	@Override
 	public void addMouseListener(Object listener) {
-		component.addMouseListener((MouseListener) listener);
+		//component.addMouseListener((MouseListener) listener);
 
 	}
 
