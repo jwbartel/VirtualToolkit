@@ -102,7 +102,7 @@ public class SwingSlider extends AWTComponent implements VirtualSlider {
 
 	@Override
 	public void setModel(Object m) {
-		// TODO Auto-generated method stub
+		setModel((BoundedRangeModel) m);
 
 	}
 
