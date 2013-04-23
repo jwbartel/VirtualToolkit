@@ -8,7 +8,7 @@ public class SWTListFactory implements ListFactory {
 	@Override
 	public VirtualList createList() {
 		SWTList toReturn = new SWTList();
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 	}
 

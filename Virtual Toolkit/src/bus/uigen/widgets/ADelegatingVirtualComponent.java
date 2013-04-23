@@ -46,9 +46,9 @@ public class ADelegatingVirtualComponent implements VirtualComponent {
 
 	}
 
-	public void init() {
-		component.init();
-	}
+//	public void init() {
+//		component.init();
+//	}
 
 	public void init(VirtualComponent theComponent) {
 		component = theComponent;

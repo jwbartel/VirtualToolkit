@@ -25,7 +25,7 @@ public class CentralUniversalWidget {
 		
 	}
 	// this should really not be called
-	public void init() {
+	protected void init() {
 //		subclassInit();
 	}
 	

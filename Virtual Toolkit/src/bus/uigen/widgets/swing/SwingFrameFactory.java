@@ -10,7 +10,7 @@ public class SwingFrameFactory implements FrameFactory {
 		JFrame frame = new JFrame();
 		// panel.setBackground(Color.white);
 		VirtualFrame toReturn = SwingFrame.virtualFrame(frame);
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 		// return new Panel();
 	}
@@ -19,7 +19,7 @@ public class SwingFrameFactory implements FrameFactory {
 		JFrame frame = new JFrame(title);
 		// panel.setBackground(Color.white);
 		VirtualFrame toReturn = SwingFrame.virtualFrame(frame);
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 		// return new Panel();
 	}

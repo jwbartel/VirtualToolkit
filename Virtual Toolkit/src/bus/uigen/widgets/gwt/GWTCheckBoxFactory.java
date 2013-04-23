@@ -8,7 +8,7 @@ public class GWTCheckBoxFactory implements CheckBoxFactory {
 	@Override
 	public VirtualCheckBox createCheckBox() {
 		VirtualCheckBox toReturn = new GWTCheckBox();
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 	}
 

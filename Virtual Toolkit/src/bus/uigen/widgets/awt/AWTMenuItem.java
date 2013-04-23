@@ -27,7 +27,7 @@ public class AWTMenuItem extends AWTMenuComponent implements VirtualMenuItem {
 		return vActionListeners;
 	}
 	@Override
-	public void init() {
+	protected void init() {
 		super.init();
 		getMenuItem().addActionListener(new AWTMenuItemEventForwarder(this));
 	}

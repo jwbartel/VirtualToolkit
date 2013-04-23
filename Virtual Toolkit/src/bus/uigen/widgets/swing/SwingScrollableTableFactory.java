@@ -9,7 +9,7 @@ public class SwingScrollableTableFactory implements ScrollableTableFactory {
 
 	public VirtualScrollableTable createTable() {
 		VirtualScrollableTable toReturn = new SwingScrollableTable();
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 
 	}
@@ -17,7 +17,7 @@ public class SwingScrollableTableFactory implements ScrollableTableFactory {
 	public VirtualScrollableTable createTable(Object tableModel) {
 		VirtualScrollableTable toReturn = new SwingScrollableTable(
 				(TableModel) tableModel);
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 
 	}
@@ -26,7 +26,7 @@ public class SwingScrollableTableFactory implements ScrollableTableFactory {
 			String[] columnNames) {
 		VirtualScrollableTable toReturn = new SwingScrollableTable(data,
 				columnNames);
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 
 	}

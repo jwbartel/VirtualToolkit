@@ -7,20 +7,20 @@ public class GWTLabelFactory implements LabelFactory {
 
 	public VirtualLabel createLabel() {
 		VirtualLabel toReturn = new GWTLabel();
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 	}
 
 	public VirtualLabel createLabel(String text) {
 		VirtualLabel toReturn = new GWTLabel(text);
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 	}
 
 	@Override
 	public VirtualLabel createLabel(Object icon) {
 		VirtualLabel toReturn = new GWTLabel();
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 	}
 

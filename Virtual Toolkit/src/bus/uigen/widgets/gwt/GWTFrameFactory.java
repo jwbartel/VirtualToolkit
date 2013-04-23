@@ -7,13 +7,13 @@ public class GWTFrameFactory implements FrameFactory {
 
 	public VirtualFrame createFrame() {
 		VirtualFrame toReturn = new GWTFrame();
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 	}
 
 	public VirtualFrame createFrame(String id) {
 		VirtualFrame toReturn = new GWTFrame(id);
-		toReturn.init();
+//		toReturn.init();
 		return toReturn;
 	}
 

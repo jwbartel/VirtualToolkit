@@ -495,9 +495,9 @@ public class Widget implements VirtualComponent {
 
 	}
 
-	public void init() {
-		component.init();
-	}
+//	public void init() {
+//		component.init();
+//	}
 
 	public boolean isDisposed() {
 		return true;

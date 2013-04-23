@@ -9,7 +9,7 @@ public interface VirtualComponent extends UniversalWidget {
 	public static final String SET_SIZE_COMMAND = ".setSize(";
 	public static final String SET_NAME_COMMAND = ".setName(";
 
-	public void init();
+//	public void init();
 
 	// public void init (Object c);
 	// public void init (Component c);

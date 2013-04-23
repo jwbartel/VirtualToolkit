@@ -12,7 +12,7 @@ public class GWTPasswordFieldFactory implements PasswordFieldFactory {
 		PasswordTextBox passwordField = new PasswordTextBox();
 		VirtualPasswordField retVal = GWTPasswordField
 				.virtualPasswordField(passwordField);
-		retVal.init();
+//		retVal.init();
 		return retVal;
 	}
 
@@ -21,7 +21,7 @@ public class GWTPasswordFieldFactory implements PasswordFieldFactory {
 		PasswordTextBox passwordField = new PasswordTextBox();
 		VirtualPasswordField retVal = GWTPasswordField
 				.virtualPasswordField(passwordField);
-		retVal.init();
+//		retVal.init();
 		return retVal;
 	}
 }
