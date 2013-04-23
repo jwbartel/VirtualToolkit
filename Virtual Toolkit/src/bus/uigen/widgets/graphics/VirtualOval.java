@@ -2,22 +2,24 @@ package bus.uigen.widgets.graphics;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.geom.Line2D;
+import java.awt.geom.Ellipse2D;
 
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.graphics.GC;
 
-public class VirtualLine implements VirtualGraphicObject {
+
+public class VirtualOval implements VirtualGraphicObject{
 	private int x1;
 	private int y1;
-	private int x2;
-	private int y2;
-
-	public VirtualLine(int x1, int y1, int x2, int y2) {
+	private int width;
+	private int height;
+	
+		
+	public VirtualOval(int x1, int y1, int width, int height){
 		this.x1 = x1;
 		this.y1 = y1;
-		this.x2 = x2;
-		this.y2 = y2;
+		this.width = width;
+		this.height = height;		
 	}
 
 	public int getX1() {
@@ -28,25 +30,24 @@ public class VirtualLine implements VirtualGraphicObject {
 		return y1;
 	}
 
-	public int getX2() {
-		return x2;
+	public int getHeight() {
+		return height;
 	}
 
-	public int getY2() {
-		return y2;
+	public int getWidth() {
+		return width;
 	}
 	
 	public void paintObject(PaintEvent e)
 	{
-		e.gc.drawLine(x1, y1, x2, y2);
+		e.gc.drawOval(x1, y1, width, height);
 	}
 	
 	public void paintObject(Graphics g)
 	{
-		g.drawLine(x1, y1, x2, y2);
+		g.drawOval(x1, y1, width, height);
 	}
 
-	
 	public void paintObject(VirtualGraphic g) {
 		// TODO Auto-generated method stub
 		
@@ -54,12 +55,13 @@ public class VirtualLine implements VirtualGraphicObject {
 
 	public void fill(Graphics2D g2) {
 	//	Graphics2D g2 = (Graphics2D)g;
-		Line2D.Double oval = new Line2D.Double(x1, y1, x2, y2);
+		Ellipse2D.Double oval = new Ellipse2D.Double(x1,y1,width,height);
 		g2.fill(oval);
 		
 	}
 
 	public void fill(GC gc) {
-		gc.drawLine(x1, y1, x2, y2);
+		gc.fillOval(x1,y1,width,height);
+		// TODO Auto-generated method stub
 	}
 }

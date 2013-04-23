@@ -20,6 +20,7 @@ import bus.uigen.widgets.VirtualToolkit;
 import bus.uigen.widgets.events.VirtualFocusListener;
 import bus.uigen.widgets.events.VirtualMouseListener;
 import bus.uigen.widgets.events.VirtualMouseMoveListener;
+import bus.uigen.widgets.exceptions.VirtualException;
 import bus.uigen.widgets.graphics.VirtualGraphic;
 import bus.uigen.widgets.universal.CentralUniversalWidget;
 

@@ -1,6 +1,5 @@
 package bus.uigen.widgets.forwarder;
 
-import java.awt.Font;
 import java.awt.FontMetrics;
 
 import bus.uigen.widgets.VirtualComponent;

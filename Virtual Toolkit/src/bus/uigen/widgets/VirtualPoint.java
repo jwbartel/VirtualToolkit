@@ -1,7 +1,5 @@
 package bus.uigen.widgets;
 
-import java.awt.Point;
-
 public class VirtualPoint {
 	private int x, y;
 	
@@ -64,15 +62,5 @@ public class VirtualPoint {
 	@Override
 	public String toString(){
 		return this.getClass().getName()+"[x="+x+",y="+y+"]";
-	}
-	
-	public static void main(String[] args){
-		Point test = new Point(27, 42);
-		test.setLocation(3.4, 4.2);
-		System.out.println(test);
-		
-		VirtualPoint vTest = new VirtualPoint(27,42);
-		test.setLocation(3.4, 4.2);
-		System.out.println(vTest);
 	}
 }

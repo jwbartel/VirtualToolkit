@@ -25,4 +25,7 @@ As of the time of writing, this project requires the following external librarie
 	
 	#Gluegen
 	gluegen-rt.jar
+
+	#Java3D
+	We have tested this using Java3D version 1.5.2
 </pre>

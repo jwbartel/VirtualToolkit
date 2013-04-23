@@ -35,7 +35,7 @@ public class DelegatePanel extends Panel /* implements VirtualDelegatePanel */
 	public void paint(Graphics g) {
 		super.paint(g);
 		for (int i = 0; i < painters.size(); i++)
-			painters.elementAt(i).paint(g);
+			painters.elementAt(i).paint(new AWTGraphic(g));
 
 	}
 
