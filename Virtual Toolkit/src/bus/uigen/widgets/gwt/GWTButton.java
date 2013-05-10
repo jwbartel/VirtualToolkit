@@ -150,7 +150,7 @@ public class GWTButton extends GWTComponent implements VirtualButton {
 
 	@Override
 	public void setIcon(Object icon) {
-		// TODO Auto-generated method stub
+		// TODO Make the icon a name on the button
 
 	}
 
