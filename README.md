@@ -29,3 +29,21 @@ As of the time of writing, this project requires the following external librarie
 	#Java3D
 	We have tested this using Java3D version 1.5.2
 </pre>
+
+Installation Instructions
+-------------------------------
+
+The project comes with both eclipse project files, and ant build files.  Simply linking or copying the aforementioned jar files into the VirtualToolkit/Virtual Tollkit/libs directory is sufficient for eclipse and ant to pick up the dependencies, and compile. For eclipse, simply import both of the projects, and as long as you properly link or copy the jars into the libs directory, it should build just fine.  Instructions for ant (after copying/linking the jars) are given below.
+
+<pre>Building the Virtual Toolkit:<code>
+	$ cd "VirtualToolkit/Virtual Toolkit"
+	$ ant -buildfile build.xml
+</code>Building and running an example from Translate:<code>
+	$ cd "VirtualToolkit/Translate"
+	$ ant -buildfile build.xml
+	$ cd bin
+	$ java -cp ".:../../Virtual Toolkit/libs/*:../../Virtual Toolkit/bin" bus.driver.SomeExample
+</code>where SomeExample is a demo app located in Translate/bin/bus/driver/.
+</pre>
+	 
+
