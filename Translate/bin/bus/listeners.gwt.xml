@@ -1,0 +1,5 @@
+<module>
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name='bus.uigen'/>
+  <source path="listeners" includes="*.java"></source>
+</module>

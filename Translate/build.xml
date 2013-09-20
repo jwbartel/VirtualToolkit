@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Translate">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../usr/share/eclipse"/>
+    <property name="VirtualToolkit.location" value="../VirtualToolkit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="libs.userclasspath">
+        <pathelement location="../../../../../VirtualToolkit/libs/gluegen-rt.jar"/>
+        <pathelement location="../../../../../VirtualToolkit/libs/swt.jar"/>
+        <pathelement location="../../../../../VirtualToolkit/libs/gwt-dev.jar"/>
+        <pathelement location="../../../../../VirtualToolkit/libs/gwt-user.jar"/>
+        <pathelement location="../../../../../VirtualToolkit/libs/jfxrt.jar"/>
+    </path>
+    <path id="VirtualToolkit.classpath">
+        <pathelement location="${VirtualToolkit.location}/bin"/>
+        <path refid="libs.userclasspath"/>
+    </path>
+    <path id="Translate.classpath">
+        <pathelement location="bin"/>
+        <path refid="VirtualToolkit.classpath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall">
+        <ant antfile="build.xml" dir="${VirtualToolkit.location}" inheritAll="false" target="clean"/>
+    </target>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects">
+        <ant antfile="build.xml" dir="${VirtualToolkit.location}" inheritAll="false" target="build-project">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+    </target>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Translate.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="AServerStarter">
+        <java classname="bus.driver.AServerStarter" failonerror="true" fork="yes">
+            <classpath refid="Translate.classpath"/>
+        </java>
+    </target>
+    <target name="ADistributedSwingSmallUICreator">
+        <java classname="bus.driver.ADistributedSwingSmallUICreator" failonerror="true" fork="yes">
+            <classpath refid="Translate.classpath"/>
+        </java>
+    </target>
+    <target name="ALargeServerStarter">
+        <java classname="bus.driver.server.ALargeServerStarter" failonerror="true" fork="yes">
+            <classpath refid="Translate.classpath"/>
+        </java>
+    </target>
+    <target name="AMainSwingLargeUICreator">
+        <java classname="bus.driver.AMainSwingLargeUICreator" failonerror="true" fork="yes">
+            <classpath refid="Translate.classpath"/>
+        </java>
+    </target>
+    <target name="AMainSwingSmallUICreator">
+        <java classname="bus.driver.AMainSwingSmallUICreator" failonerror="true" fork="yes">
+            <classpath refid="Translate.classpath"/>
+        </java>
+    </target>
+    <target name="ADistributedSWTLargeUICreator">
+        <java classname="bus.driver.ADistributedSWTLargeUICreator" failonerror="true" fork="yes">
+            <classpath refid="Translate.classpath"/>
+        </java>
+    </target>
+    <target name="AMainSWTSmallUICreator">
+        <java classname="bus.driver.AMainSWTSmallUICreator" failonerror="true" fork="yes">
+            <classpath refid="Translate.classpath"/>
+        </java>
+    </target>
+    <target name="ADistributedAWTLargeUICreator">
+        <java classname="bus.driver.ADistributedAWTLargeUICreator" failonerror="true" fork="yes">
+            <classpath refid="Translate.classpath"/>
+        </java>
+    </target>
+    <target name="ADistributedSwingLargeUICreator">
+        <java classname="bus.driver.ADistributedSwingLargeUICreator" failonerror="true" fork="yes">
+            <classpath refid="Translate.classpath"/>
+        </java>
+    </target>
+    <target name="AMainSWTLargeUICreator">
+        <java classname="bus.driver.AMainSWTLargeUICreator" failonerror="true" fork="yes">
+            <classpath refid="Translate.classpath"/>
+        </java>
+    </target>
+</project>

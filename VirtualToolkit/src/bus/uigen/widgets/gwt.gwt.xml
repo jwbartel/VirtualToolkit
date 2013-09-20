@@ -1,0 +1,8 @@
+<module rename-to='virtualgwt'>
+  <inherits name='com.google.gwt.user.User'/>
+  
+  <inherits name="bus.uigen.widgets" />
+  
+  <source path="gwt"></source>
+  <source path="events"></source>
+</module>
