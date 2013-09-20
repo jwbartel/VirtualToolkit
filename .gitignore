@@ -1,7 +1,7 @@
 #*/.classpath
 #*/.project
 #.metadata
-*/libs
+*/libs/*
 *.class
 *.jar
 *.dll

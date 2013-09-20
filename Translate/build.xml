@@ -6,30 +6,29 @@
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="Translate">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../../usr/share/eclipse"/>
-    <property name="VirtualToolkit.location" value="../VirtualToolkit"/>
+    <property name="Virtual Toolkit.location" value="../Virtual Toolkit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
     <path id="libs.userclasspath">
-        <pathelement location="../../../../../VirtualToolkit/libs/gluegen-rt.jar"/>
-        <pathelement location="../../../../../VirtualToolkit/libs/swt.jar"/>
-        <pathelement location="../../../../../VirtualToolkit/libs/gwt-dev.jar"/>
-        <pathelement location="../../../../../VirtualToolkit/libs/gwt-user.jar"/>
-        <pathelement location="../../../../../VirtualToolkit/libs/jfxrt.jar"/>
+        <pathelement location="../../../../../Virtual Toolkit/libs/gluegen-rt.jar"/>
+        <pathelement location="../../../../../Virtual Toolkit/libs/gwt-dev.jar"/>
+        <pathelement location="../../../../../Virtual Toolkit/libs/gwt-user.jar"/>
+        <pathelement location="../../../../../Virtual Toolkit/libs/jfxrt.jar"/>
+        <pathelement location="../../../../../Virtual Toolkit/libs/swt.jar"/>
     </path>
-    <path id="VirtualToolkit.classpath">
-        <pathelement location="${VirtualToolkit.location}/bin"/>
+    <path id="Virtual Toolkit.classpath">
+        <pathelement location="${Virtual Toolkit.location}/bin"/>
         <path refid="libs.userclasspath"/>
     </path>
     <path id="Translate.classpath">
         <pathelement location="bin"/>
-        <path refid="VirtualToolkit.classpath"/>
+        <path refid="Virtual Toolkit.classpath"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
-                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -38,11 +37,11 @@
         <delete dir="bin"/>
     </target>
     <target depends="clean" name="cleanall">
-        <ant antfile="build.xml" dir="${VirtualToolkit.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${Virtual Toolkit.location}" inheritAll="false" target="clean"/>
     </target>
     <target depends="build-subprojects,build-project" name="build"/>
     <target name="build-subprojects">
-        <ant antfile="build.xml" dir="${VirtualToolkit.location}" inheritAll="false" target="build-project">
+        <ant antfile="build.xml" dir="${Virtual Toolkit.location}" inheritAll="false" target="build-project">
             <propertyset>
                 <propertyref name="build.compiler"/>
             </propertyset>
