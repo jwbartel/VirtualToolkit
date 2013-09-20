@@ -35,10 +35,11 @@ Installation Instructions
 
 The project comes with both eclipse project files, and ant build files.  Simply linking or copying the aforementioned jar files into the VirtualToolkit/Virtual Tollkit/libs directory is sufficient for eclipse and ant to pick up the dependencies, and compile. For eclipse, simply import both of the projects, and as long as you properly link or copy the jars into the libs directory, it should build just fine.  Instructions for ant (after copying/linking the jars) are given below.
 
-<pre>Building the Virtual Toolkit:<code>
+Building the Virtual Toolkit:<pre><code>
 	$ cd "VirtualToolkit/Virtual Toolkit"
 	$ ant -buildfile build.xml
-</code>Building and running an example from Translate:<code>
+</code></pre>
+Building and running an example from Translate:<pre><code>
 	$ cd "VirtualToolkit/Translate"
 	$ ant -buildfile build.xml
 	$ cd bin
