@@ -33,7 +33,11 @@ As of the time of writing, this project requires the following external librarie
 Installation Instructions
 -------------------------------
 
-The project comes with both eclipse project files, and ant build files.  Simply linking or copying the aforementioned jar files into the VirtualToolkit/Virtual Tollkit/libs directory is sufficient for eclipse and ant to pick up the dependencies, and compile. For eclipse, simply import both of the projects, and as long as you properly link or copy the jars into the libs directory, it should build just fine.  Instructions for ant (after copying/linking the jars) are given below.
+The project comes with both eclipse project files, and ant build files.  Simply linking or copying the aforementioned jar files into the VirtualToolkit/Virtual Tollkit/libs directory is sufficient for eclipse and ant to pick up the dependencies, and compile. 
+
+For eclipse, after you've linked/copied the jars, simply import both of the projects. Right click on Virtual Toolkit select build path --> configure buildpath --> Libraries --> Add Jars, and select the jars/links from the libs folder.
+
+Instructions for ant (after copying/linking the jars) are given below.
 
 Building the Virtual Toolkit:
 <pre>
