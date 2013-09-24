@@ -37,16 +37,16 @@ The project comes with both eclipse project files, and ant build files.  Simply 
 
 Building the Virtual Toolkit:
 <pre>
-<code>	$ cd "VirtualToolkit/Virtual Toolkit"
+	$ cd "VirtualToolkit/Virtual Toolkit"
 	$ ant -buildfile build.xml
-</code></pre>
+</pre>
 Building and running an example from Translate:
 <pre>
-<code>	$ cd "VirtualToolkit/Translate"
+	$ cd "VirtualToolkit/Translate"
 	$ ant -buildfile build.xml
 	$ cd bin
 	$ java -cp ".:../../Virtual Toolkit/libs/*:../../Virtual Toolkit/bin" bus.driver.SomeExample
-</code></pre> 
+</pre> 
 where SomeExample is a demo app located in Translate/bin/bus/driver/.
 	 
 
