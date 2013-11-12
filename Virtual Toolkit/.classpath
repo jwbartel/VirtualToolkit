@@ -3,5 +3,16 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/libs"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/App Engine (2)"/>
+	<classpathentry kind="lib" path="B:/Toolkit/Jars/j3d/lib/ext/j3dcore.jar"/>
+	<classpathentry kind="lib" path="B:/Toolkit/Jars/j3d/lib/ext/j3dutils.jar"/>
+	<classpathentry kind="lib" path="B:/Toolkit/Jars/j3d/lib/ext/vecmath.jar"/>
+	<classpathentry kind="lib" path="B:/Toolkit/Jars/jogamp-all-platforms/jar/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="B:/Toolkit/Jars/gwt-2.5.1/gwt-dev.jar"/>
+	<classpathentry kind="lib" path="B:/Toolkit/Jars/gwt-2.5.1/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="B:/Toolkit/Jars/gwt-2.5.1/gwt-user.jar"/>
+	<classpathentry kind="lib" path="B:/Toolkit/Jars/swt-4.3-gtk-linux-x86/swt.jar"/>
+	<classpathentry kind="lib" path="B:/Toolkit/Jars/swt-4.3-gtk-linux-x86/swt-debug.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

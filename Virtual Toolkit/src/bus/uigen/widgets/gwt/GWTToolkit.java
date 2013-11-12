@@ -1,6 +1,7 @@
 package bus.uigen.widgets.gwt;
 
 import bus.uigen.widgets.ButtonSelector;
+import bus.uigen.widgets.CheckBoxSelector;
 import bus.uigen.widgets.FrameSelector;
 import bus.uigen.widgets.GridLayoutSelector;
 import bus.uigen.widgets.LabelSelector;
@@ -43,6 +44,7 @@ public class GWTToolkit extends VirtualToolkit {
 		// ProxyGWTServerEndSelector.setProxyGWTServerEndFactory(new
 		// GWTProxyGWTServerEndFactory());
 		TextFieldSelector.setTextFieldFactory(new GWTTextFieldFactory());
+		CheckBoxSelector.setCheckBoxFactory(new GWTCheckBoxFactory());
 		NumberFormatSelector
 				.setNumberFormatFactory(new GWTNumberFormatFactory());
 	}
