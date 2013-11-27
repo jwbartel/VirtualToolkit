@@ -18,6 +18,11 @@ public class GWTTable extends GWTContainer implements VirtualTable {
 	}
 
 	@SuppressWarnings("rawtypes")
+	public GWTTable() {
+		super(new CellTable());
+	}
+
+	@SuppressWarnings("rawtypes")
 	public CellTable getTable() {
 		return (CellTable) component;
 	}

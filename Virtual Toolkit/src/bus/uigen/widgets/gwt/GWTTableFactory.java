@@ -7,8 +7,7 @@ public class GWTTableFactory implements TableFactory {
 
 	@Override
 	public VirtualTable createTable() {
-		// TODO Auto-generated method stub
-		return null;
+		return new GWTTable();
 	}
 
 	@Override

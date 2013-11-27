@@ -47,8 +47,9 @@ public abstract class GWTContainer extends GWTComponent implements
 	}
 
 	public void execSetLayout(VirtualLayout l) {
-		if (l == null)
+		if (l == null){
 			return;
+		}
 		layout = (GWTLayout) l;
 		this.getContainer().add(((GWTLayout) l).getComponent());
 
