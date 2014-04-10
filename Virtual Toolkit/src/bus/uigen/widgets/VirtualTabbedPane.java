@@ -14,6 +14,6 @@ public interface VirtualTabbedPane extends VirtualContainer {
 	
 	public int getTabCount() ;
 	
-	public void addChangeLisetner(Object aListener) ;
+	public void addChangeListener(Object aListener) ;
 
 }

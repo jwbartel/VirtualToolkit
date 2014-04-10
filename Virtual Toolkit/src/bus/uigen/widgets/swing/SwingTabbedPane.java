@@ -48,7 +48,7 @@ public class SwingTabbedPane extends AWTContainer implements VirtualTabbedPane {
 		return getTabbedPane().getTabCount();
 	}
 	
-	public void addChangeLisetner(Object aListener) {
+	public void addChangeListener(Object aListener) {
 		getTabbedPane().addChangeListener((ChangeListener) aListener);
 	}
 
