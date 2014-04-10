@@ -3,6 +3,7 @@ package bus.uigen.widgets.swing;
 import java.awt.Component;
 
 import javax.swing.JTabbedPane;
+import javax.swing.event.ChangeListener;
 
 import bus.uigen.widgets.VirtualComponent;
 import bus.uigen.widgets.VirtualTabbedPane;
@@ -34,6 +35,21 @@ public class SwingTabbedPane extends AWTContainer implements VirtualTabbedPane {
 
 	public void setTabPlacement(int placement) {
 		getTabbedPane().setTabPlacement(placement);
+	}
+	
+	public void setSelectedIndex(int index) {
+		getTabbedPane().setSelectedIndex(index);
+	}
+	public int getSelectedIndex() {
+		return getTabbedPane().getSelectedIndex();
+	}
+	
+	public int getTabCount() {
+		return getTabbedPane().getTabCount();
+	}
+	
+	public void addChangeLisetner(Object aListener) {
+		getTabbedPane().addChangeListener((ChangeListener) aListener);
 	}
 
 	public static SwingTabbedPane virtualTabbedPane(JTabbedPane theTabbedPane) {
