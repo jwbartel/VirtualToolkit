@@ -2,6 +2,7 @@ package bus.uigen.widgets.swing;
 
 import java.awt.Component;
 
+import javax.swing.Icon;
 import javax.swing.JTabbedPane;
 import javax.swing.event.ChangeListener;
 
@@ -27,6 +28,13 @@ public class SwingTabbedPane extends AWTContainer implements VirtualTabbedPane {
 
 	public void addTab(String label, VirtualComponent c) {
 		getTabbedPane().addTab(label, (Component) c.getPhysicalComponent());
+	}
+	
+	@Override
+	public void addTab(String title, Object icon, VirtualComponent component,
+			String tip) {
+		getTabbedPane().addTab(title, (Icon) icon, (Component) component.getPhysicalComponent(), tip);
+		
 	}
 
 	public void setTitleAt(int index, String label) {
@@ -55,5 +63,7 @@ public class SwingTabbedPane extends AWTContainer implements VirtualTabbedPane {
 	public static SwingTabbedPane virtualTabbedPane(JTabbedPane theTabbedPane) {
 		return (SwingTabbedPane) AWTComponent.virtualComponent(theTabbedPane);
 	}
+
+	
 
 }
