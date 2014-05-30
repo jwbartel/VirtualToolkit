@@ -112,5 +112,6 @@ public abstract class SWTTextComponent extends SWTComponent {
 	public void execSetIsSynchronizedText(boolean isSynchronizedText) {
 		this.isSynchronizedText = isSynchronizedText;
 	}
+	
 
 }

@@ -346,5 +346,12 @@ public class SWTTextField extends SWTComponent implements VirtualTextField {
 	public void execSetIsSynchronizedText(boolean isSynchronizedText) {
 		this.isSynchronizedText = isSynchronizedText;
 	}
+	public Object getCaret() {
+		return null;
+	}
+	
+	public void setCaret(Object aCaret) {
+		
+	}
 
 }

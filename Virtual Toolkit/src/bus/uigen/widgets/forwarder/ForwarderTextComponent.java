@@ -25,6 +25,14 @@ public abstract class ForwarderTextComponent extends ForwarderComponent {
 	public void execSetText(String theText) {
 		this.text = theText;
 	}
+	
+	public Object getCaret() {
+		return null;
+	}
+	
+	public void setCaret(Object aCaret) {
+		
+	}
 
 	public boolean getIsSynchronizedText() {
 		return isSynchronizedText;

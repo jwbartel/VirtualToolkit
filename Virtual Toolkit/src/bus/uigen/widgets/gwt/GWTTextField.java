@@ -242,5 +242,12 @@ public class GWTTextField extends GWTComponent implements VirtualTextField {
 		// TODO Auto-generated method stub
 
 	}
+	public Object getCaret() {
+		return null;
+	}
+	
+	public void setCaret(Object aCaret) {
+		
+	}
 
 }

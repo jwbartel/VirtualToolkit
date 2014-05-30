@@ -121,5 +121,12 @@ public abstract class AWTTextComponent extends AWTComponent {
 	public void execSetIsSynchronizedText(boolean isSynchronizedText) {
 		this.isSynchronizedText = isSynchronizedText;
 	}
-
+	
+	public Object getCaret() {
+		return null;
+	}
+	
+	public void setCaret(Object aCaret) {
+		
+	}
 }

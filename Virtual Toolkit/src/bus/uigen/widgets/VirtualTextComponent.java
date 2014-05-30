@@ -33,4 +33,8 @@ public interface VirtualTextComponent extends VirtualComponent /* VirtualActiona
 	public void execSetIsSynchronizedText(boolean isSynchronizedText);
 
 	public void setCaretPosition(int newVal);
+	
+	public Object getCaret();
+	
+	public void setCaret(Object aCaret);
 }
