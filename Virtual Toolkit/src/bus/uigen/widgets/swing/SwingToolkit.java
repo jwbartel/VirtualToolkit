@@ -5,6 +5,7 @@ import bus.uigen.widgets.ButtonSelector;
 import bus.uigen.widgets.CheckBoxSelector;
 import bus.uigen.widgets.ComboBoxSelector;
 import bus.uigen.widgets.DesktopPaneSelector;
+import bus.uigen.widgets.EditorPaneSelector;
 import bus.uigen.widgets.FlowLayoutSelector;
 import bus.uigen.widgets.FrameSelector;
 import bus.uigen.widgets.GridLayoutSelector;
@@ -111,6 +112,7 @@ public class SwingToolkit extends VirtualToolkit {
 		NumberFormatSelector
 				.setNumberFormatFactory(new AWTNumberFormatFactory());
 		SpinnerSelector.setSpinnerFactory(new SwingSpinnerFactory());
+		EditorPaneSelector.setEditorPaneFactory(new SwingEditorPaneFactory());
 
 	}
 
